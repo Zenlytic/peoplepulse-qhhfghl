@@ -59,66 +59,35 @@ fields:
 
 - name: total_engagement
   field_type: measure
-  type: number
+  type: sum
   description: The total sum of engagement across all marketing channels.
-  sql: SUM(${engagement})
+  sql: ${engagement}
 
 - name: total_spend
   field_type: measure
-  type: number
+  type: sum
   description: The total sum of marketing spend.
-  sql: SUM(${spend})
+  sql: ${spend}
 
 - name: total_reach
   field_type: measure
   type: number
   description: The total sum of reach across all marketing channels.
-  sql: SUM(${reach})
+  sql: ${reach}
 
 - name: average_conversion_rate
   field_type: measure
-  type: number
+  type: average
   description: The average conversion rate across all campaigns.
-  sql: AVG(${conversion_rate})
-
-- name: average_spend_per_engagement
-  field_type: measure
-  type: number
-  description: The average amount of spend per engagement.
-  sql: NULLIF(SUM(${spend}), 0) / NULLIF(SUM(${engagement}), 0)
-
-- name: average_reach_per_engagement
-  field_type: measure
-  type: number
-  description: The average reach per engagement.
-  sql: NULLIF(SUM(${reach}), 0) / NULLIF(SUM(${engagement}), 0)
+  sql: ${conversion_rate}
+  value_format_name: percent_1
 
 - name: spend_to_reach_ratio
   field_type: measure
   type: number
   description: The ratio of spend to reach, indicating how much is spent for each
     unit of reach.
-  sql: NULLIF(SUM(${spend}), 0) / NULLIF(SUM(${reach}), 0)
-
-- name: engagement_to_conversion_ratio
-  field_type: measure
-  type: number
-  description: The ratio of engagement to conversion rate, indicating the effectiveness
-    of engagement in driving conversions.
-  sql: NULLIF(SUM(${engagement}), 0) * NULLIF(AVG(${conversion_rate}), 0)
-
-- name: count_campaigns
-  field_type: measure
-  type: number
-  description: The count of unique campaigns.
-  sql: COUNT(DISTINCT ${campaign})
-
-- name: count_channels
-  field_type: measure
-  type: number
-  description: The count of unique marketing channels.
-  sql: COUNT(DISTINCT ${channel})
-
+  sql: NULLIF(${total_spend}, 0) / NULLIF(${total_reach}, 0)
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns

@@ -13,16 +13,19 @@ fields:
   field_type: dimension
   type: number
   sql: ${TABLE}."ACCOUNT_ID"
+  hidden: true
 
 - name: plan_type
   field_type: dimension
   type: string
   sql: ${TABLE}."PLAN_TYPE"
+  searchable: true
 
 - name: customer_segment
   field_type: dimension
   type: string
   sql: ${TABLE}."CUSTOMER_SEGMENT"
+  searchable: true
 
 - name: mrr
   field_type: dimension
@@ -50,43 +53,9 @@ fields:
   type: sum
   description: The total monthly recurring revenue.
   sql: ${mrr}
-
-- name: average_mrr
-  field_type: measure
-  type: average
-  description: The average monthly recurring revenue per account.
-  sql: ${mrr}
-
-- name: count_accounts
-  field_type: measure
-  type: count_distinct
-  description: The total number of unique accounts.
-  sql: ${account_id}
-
-- name: mrr_by_plan_type
-  field_type: measure
-  type: sum
-  description: The total monthly recurring revenue segmented by plan type.
-  sql: CASE WHEN ${plan_type} IS NOT NULL THEN ${mrr} ELSE 0 END
-
-- name: mrr_by_customer_segment
-  field_type: measure
-  type: sum
-  description: The total monthly recurring revenue segmented by customer segment.
-  sql: CASE WHEN ${customer_segment} IS NOT NULL THEN ${mrr} ELSE 0 END
-
-- name: count_plans
-  field_type: measure
-  type: count_distinct
-  description: The total number of unique plan types.
-  sql: ${plan_type}
-
-- name: count_customer_segments
-  field_type: measure
-  type: count_distinct
-  description: The total number of unique customer segments.
-  sql: ${customer_segment}
-
+  non_additive_dimension:
+      name: date_raw
+      window_choice: max
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
