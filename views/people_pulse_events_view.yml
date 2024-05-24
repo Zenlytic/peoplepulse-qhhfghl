@@ -1,6 +1,6 @@
 version: 1
 type: view
-name: people_pulse_events
+name: events
 model_name: peoplepulse_model
 description: The user id is a uuid for a unique person, and the customer id is the id of that person that connects to a known customer. These are events with the product.
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EVENTS

@@ -1,6 +1,6 @@
 version: 1
 type: view
-name: people_pulse_sales_rep
+name: sales_rep
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_SALES_REP
 default_date: hire_date

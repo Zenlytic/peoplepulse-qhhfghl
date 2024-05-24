@@ -1,6 +1,6 @@
 version: 1
 type: view
-name: people_pulse_session
+name: web_session
 model_name: peoplepulse_model
 description: The sessions are just for the marketing site, so we don't have information on logged in users of the product
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_SESSION
