@@ -25,7 +25,7 @@ fields:
   type: number
   sql: ${TABLE}."EMPLOYEE_ID"
 
-- name: name
+- name: employee_name
   field_type: dimension
   type: string
   sql: ${TABLE}."NAME"
