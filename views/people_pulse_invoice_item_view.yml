@@ -1,11 +1,12 @@
 version: 1
 type: view
-name: people_pulse_invoice_item
+name: invoice_item
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_INVOICE_ITEM
+default_date: invoice.invoice_date
 identifiers:
 - name: invoice_id
-  type: primary
+  type: foreign
   sql: ${invoice_id}
 - name: product_id
   type: foreign

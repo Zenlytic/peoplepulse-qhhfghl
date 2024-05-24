@@ -1,6 +1,6 @@
 version: 1
 type: view
-name: people_pulse_invoice
+name: invoice
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_INVOICE
 default_date: invoice_date
@@ -55,11 +55,6 @@ fields:
   description: The total number of unique accounts with invoices.
   sql: ${account_id}
 
-- name: invoices_per_cadence
-  field_type: measure
-  type: count
-  description: The number of invoices per billing cadence.
-  sql: ${invoice_id}
 
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
