@@ -98,7 +98,7 @@ fields:
   sql: ${opportunity}
   filters:
   - field: stage
-    value: Won
+    value: Closed Won
   value_format_name: decimal_0
 
 - name: count_lost_opportunities
@@ -108,7 +108,7 @@ fields:
   sql: ${opportunity}
   filters:
   - field: stage
-    value: Lost
+    value: Closed Lost
   value_format_name: decimal_0
 
 - name: average_probability_to_close
