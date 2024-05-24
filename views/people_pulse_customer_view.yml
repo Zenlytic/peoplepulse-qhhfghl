@@ -2,6 +2,7 @@ version: 1
 type: view
 name: customer
 model_name: peoplepulse_model
+description: These are the users/customers (humans) who use the product, not the companies who pay for it (that is accounts)
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER
 default_date: account.contract_start_date
 identifiers:
