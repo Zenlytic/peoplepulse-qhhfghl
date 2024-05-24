@@ -37,6 +37,7 @@ fields:
   required_access_grants: [exec_only]
 
 - name: role
+  label: Role
   field_type: dimension
   type: string
   sql: ${TABLE}."ROLE"
