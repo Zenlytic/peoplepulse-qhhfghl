@@ -7,6 +7,18 @@ identifiers:
 - name: employee_id
   type: primary
   sql: ${employee_id}
+- name: assignee_id
+  type: primary
+  sql: ${employee_id}
+  join_as: assigned_employees
+  join_as_label: Assigned To
+  join_as_field_prefix: Assignee 
+- name: creator_id
+  type: primary
+  sql: ${employee_id}
+  join_as: created_by_employees
+  join_as_label: Created By    
+  join_as_field_prefix: Creator 
 fields:
 - name: employee_id
   field_type: dimension
@@ -22,6 +34,7 @@ fields:
   field_type: dimension
   type: number
   sql: ${TABLE}."SALARY"
+  required_access_grants: [exec_only]
 
 - name: role
   field_type: dimension

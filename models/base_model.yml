@@ -2,3 +2,9 @@ connection: demo
 name: peoplepulse_model
 type: model
 version: 1
+
+access_grants:
+- name: exec_only
+  user_attribute: department
+  allowed_values:
+  - Executive
