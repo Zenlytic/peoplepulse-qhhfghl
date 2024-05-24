@@ -5,10 +5,10 @@ model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER
 identifiers:
 - name: account_id
-  type: primary
+  type: foreign
   sql: ${account_id}
 - name: customer_id
-  type: foreign
+  type: primary
   sql: ${customer_id}
 fields:
 - name: account_id
