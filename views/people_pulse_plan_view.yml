@@ -37,33 +37,9 @@ fields:
 
 - name: total_daily_quota
   field_type: measure
-  type: number
+  type: sum
   description: The sum of daily quotas for all sales representatives.
-  sql: SUM(${daily_quota})
-
-- name: average_daily_quota
-  field_type: measure
-  type: number
-  description: The average daily quota across all sales representatives.
-  sql: AVG(${daily_quota})
-
-- name: count_sales_reps
-  field_type: measure
-  type: number
-  description: The count of unique sales representatives.
-  sql: COUNT(DISTINCT ${sales_rep_id})
-
-- name: min_daily_quota
-  field_type: measure
-  type: number
-  description: The minimum daily quota assigned to any sales representative.
-  sql: MIN(${daily_quota})
-
-- name: max_daily_quota
-  field_type: measure
-  type: number
-  description: The maximum daily quota assigned to any sales representative.
-  sql: MAX(${daily_quota})
+  sql: ${daily_quota}
 
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.

@@ -52,12 +52,6 @@ fields:
   - year
   sql: ${TABLE}."HIRE_DATE"
 
-- name: total_quota
-  field_type: measure
-  type: sum
-  description: The sum of all quotas assigned to sales representatives.
-  sql: ${quota}
-
 - name: average_quota
   field_type: measure
   type: average
