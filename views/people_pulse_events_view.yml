@@ -34,21 +34,25 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."BROWSER"
+  searchable: true
 
 - name: event_type
   field_type: dimension
   type: string
   sql: ${TABLE}."EVENT_TYPE"
+  searchable: true
 
 - name: os
   field_type: dimension
   type: string
   sql: ${TABLE}."OS"
+  searchable: true
 
 - name: device_type
   field_type: dimension
   type: string
   sql: ${TABLE}."DEVICE_TYPE"
+  searchable: true
 
 - name: event_time
   field_type: dimension_group
@@ -89,37 +93,6 @@ fields:
   type: number
   description: The average number of events per user
   sql: COUNT(${event_id}) / NULLIF(COUNT(DISTINCT ${user_id}), 0)
-
-- name: events_per_customer
-  field_type: measure
-  type: number
-  description: The average number of events per customer
-  sql: COUNT(${event_id}) / NULLIF(COUNT(DISTINCT ${customer_id}), 0)
-
-- name: event_type_distribution
-  field_type: measure
-  type: count
-  description: The distribution count of different event types
-  sql: ${event_type}
-
-- name: browser_usage
-  field_type: measure
-  type: count
-  description: The count of events by browser type
-  sql: ${browser}
-
-- name: os_usage
-  field_type: measure
-  type: count
-  description: The count of events by operating system
-  sql: ${os}
-
-- name: device_type_distribution
-  field_type: measure
-  type: count
-  description: The distribution count of events by device type
-  sql: ${device_type}
-
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
