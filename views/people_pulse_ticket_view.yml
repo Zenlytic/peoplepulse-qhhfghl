@@ -43,7 +43,25 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."ISSUE_TYPE"
+  searchable: true
 
+- name: ticket_count
+  field_type: measure
+  type: count
+  description: The number of support tickets opened in Zendesk
+  sql: ${ticket_id}
+
+- name: average_satisfaction_score
+  field_type: measure
+  type: average
+  description: The average customer satisfaction with the support experience
+  sql: ${customer_satisfaction_score}
+
+- name: average_resolution_time
+  field_type: measure
+  type: average
+  description: The average time it took to resolve a ticket in minutes 
+  sql: ${resolution_time}
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
