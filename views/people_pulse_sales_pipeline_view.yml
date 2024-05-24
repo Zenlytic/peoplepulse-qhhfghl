@@ -18,16 +18,19 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."OPPORTUNITY"
+  searchable: true
 
 - name: lead
   field_type: dimension
   type: string
   sql: ${TABLE}."LEAD"
+  searchable: true
 
 - name: stage
   field_type: dimension
   type: string
   sql: ${TABLE}."STAGE"
+  searchable: true
 
 - name: probability_to_close
   field_type: dimension
@@ -107,24 +110,6 @@ fields:
   type: average
   description: The average probability to close across all opportunities.
   sql: ${probability_to_close}
-
-- name: opportunities_by_stage
-  field_type: measure
-  type: count
-  description: The number of opportunities in each stage of the sales pipeline.
-  sql: ${opportunity}
-
-- name: opportunities_by_product
-  field_type: measure
-  type: count
-  description: The number of opportunities associated with each product.
-  sql: ${opportunity}
-
-- name: opportunities_by_sales_rep
-  field_type: measure
-  type: count
-  description: The number of opportunities managed by each sales representative.
-  sql: ${opportunity}
 
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.

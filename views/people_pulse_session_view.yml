@@ -2,6 +2,7 @@ version: 1
 type: view
 name: people_pulse_session
 model_name: peoplepulse_model
+description: The sessions are just for the marketing site, so we don't have information on logged in users of the product
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_SESSION
 default_date: timestamp
 identifiers:
@@ -102,24 +103,6 @@ fields:
   type: sum
   description: The total number of page views across all sessions
   sql: ${page_views}
-
-- name: sessions_per_device_type
-  field_type: measure
-  type: count
-  description: The number of sessions per device type
-  sql: ${device_type}
-
-- name: sessions_per_browser
-  field_type: measure
-  type: count
-  description: The number of sessions per browser
-  sql: ${browser}
-
-- name: sessions_per_location
-  field_type: measure
-  type: count
-  description: The number of sessions per location
-  sql: ${location}
 
 - name: average_page_views_per_session
   field_type: measure

@@ -2,7 +2,7 @@ version: 1
 type: view
 name: people_pulse_events
 model_name: peoplepulse_model
-description: The user id is a uuid for a unique person, and the customer id is the id of that person that connects to a known customer
+description: The user id is a uuid for a unique person, and the customer id is the id of that person that connects to a known customer. These are events with the product.
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EVENTS
 default_date: event_time
 identifiers:
@@ -76,12 +76,6 @@ fields:
   type: count
   description: The total number of events recorded
   sql: ${event_id}
-
-- name: unique_users
-  field_type: measure
-  type: count_distinct
-  description: The count of unique users who have generated events
-  sql: ${user_id}
 
 - name: unique_customers
   field_type: measure

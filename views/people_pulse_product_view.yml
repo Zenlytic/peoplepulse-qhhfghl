@@ -17,11 +17,13 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."PRODUCT_TYPE"
+  searchable: true
 
 - name: product_name
   field_type: dimension
   type: string
   sql: ${TABLE}."PRODUCT_NAME"
+  searchable: true
 
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.

@@ -18,6 +18,7 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."NAME"
+  searchable: true
 
 - name: quota
   field_type: dimension
@@ -33,6 +34,7 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."REGION"
+  searchable: true
 
 - name: hire_date
   field_type: dimension_group
@@ -67,12 +69,6 @@ fields:
   type: count
   description: The total number of sales representatives.
   sql: ${sales_rep_id}
-
-- name: count_sales_reps_by_region
-  field_type: measure
-  type: count_distinct
-  description: The number of unique regions where sales representatives are located.
-  sql: ${region}
 
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
