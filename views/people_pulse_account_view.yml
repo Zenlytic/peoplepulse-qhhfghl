@@ -25,10 +25,12 @@ fields:
     field_type: dimension
     type: string
     sql: ${TABLE}."ACCOUNT_NAME"
+    searchable: true
   - name: location
     field_type: dimension
     type: string
     sql: ${TABLE}."LOCATION"
+    searchable: true
   - name: size
     field_type: dimension
     type: number
@@ -37,14 +39,17 @@ fields:
     field_type: dimension
     type: string
     sql: ${TABLE}."CONTACT_NAME"
+    searchable: true
   - name: churned
     field_type: dimension
     type: string
     sql: ${TABLE}."CHURNED"
+    searchable: true
   - name: industry
     field_type: dimension
     type: string
     sql: ${TABLE}."INDUSTRY"
+    searchable: true
   - name: contract_end_date
     field_type: dimension_group
     type: time
