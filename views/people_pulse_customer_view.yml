@@ -44,7 +44,7 @@ fields:
 
 - name: number_of_customers
   field_type: measure
-  type: count_distinct
+  type: count
   sql: ${TABLE}.customer_id
   description: This is the number of customers/users who are using the product, not the unique accounts paying us
 
