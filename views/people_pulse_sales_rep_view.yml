@@ -57,12 +57,14 @@ fields:
   type: average
   description: The average quota assigned to sales representatives.
   sql: ${quota}
+  value_format_name: usd
 
 - name: count_sales_reps
   field_type: measure
   type: count
   description: The total number of sales representatives.
   sql: ${sales_rep_id}
+  value_format_name: decimal_0
 
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.

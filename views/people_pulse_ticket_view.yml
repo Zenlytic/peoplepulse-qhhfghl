@@ -50,6 +50,7 @@ fields:
   type: count
   description: The number of support tickets opened in Zendesk
   sql: ${ticket_id}
+  value_format_name: decimal_0
 
 - name: average_satisfaction_score
   field_type: measure

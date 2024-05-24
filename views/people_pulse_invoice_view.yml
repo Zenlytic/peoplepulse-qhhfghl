@@ -48,12 +48,14 @@ fields:
   type: count
   description: The total number of invoices.
   sql: ${invoice_id}
+  value_format_name: decimal_0
 
 - name: total_accounts
   field_type: measure
   type: count_distinct
   description: The total number of unique accounts with invoices.
   sql: ${account_id}
+  value_format_name: decimal_0
 
 
 

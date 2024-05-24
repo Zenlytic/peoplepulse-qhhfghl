@@ -68,6 +68,7 @@ fields:
   type: sum
   description: The total sum of marketing spend.
   sql: ${spend}
+  value_format_name: usd
 
 - name: total_reach
   field_type: measure

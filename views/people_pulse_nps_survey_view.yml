@@ -45,11 +45,11 @@ fields:
   type: average
   sql: ${survey_score}
 
-
 - name: count_nps_survey_quizes
   field_type: measure
   type: count
   sql: ${customer_id}
+  value_format_name: decimal_0
   
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns

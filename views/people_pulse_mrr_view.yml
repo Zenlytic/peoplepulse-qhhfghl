@@ -53,6 +53,7 @@ fields:
   type: sum
   description: The total monthly recurring revenue.
   sql: ${mrr}
+  value_format_name: usd
   non_additive_dimension:
       name: date_raw
       window_choice: max

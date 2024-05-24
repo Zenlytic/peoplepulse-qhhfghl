@@ -76,18 +76,15 @@ fields:
   type: count
   description: The total number of events recorded
   sql: ${event_id}
+  value_format_name: decimal_0
 
 - name: unique_customers
   field_type: measure
   type: count_distinct
   description: The count of unique customers associated with the events
   sql: ${customer_id}
+  value_format_name: decimal_0
 
-- name: events_per_user
-  field_type: measure
-  type: number
-  description: The average number of events per user
-  sql: COUNT(${event_id}) / NULLIF(COUNT(DISTINCT ${user_id}), 0)
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns

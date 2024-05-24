@@ -68,24 +68,28 @@ fields:
   type: sum
   description: The sum of the deal sizes for all opportunities.
   sql: ${deal_size}
+  value_format_name: usd
 
 - name: average_deal_size
   field_type: measure
   type: average
   description: The average size of deals across all opportunities.
   sql: ${deal_size}
+  value_format_name: usd
 
 - name: count_opportunities
   field_type: measure
   type: count
   description: The total number of opportunities in the pipeline.
   sql: ${opportunity}
+  value_format_name: decimal_0
 
 - name: weighted_deal_value
   field_type: measure
   type: number
   description: The total deal size weighted by the probability to close for each opportunity.
   sql: ${deal_size} * ${probability_to_close} / 100
+  value_format_name: usd
 
 - name: count_won_opportunities
   field_type: measure
@@ -95,6 +99,7 @@ fields:
   filters:
   - field: stage
     value: Won
+  value_format_name: decimal_0
 
 - name: count_lost_opportunities
   field_type: measure
@@ -104,6 +109,7 @@ fields:
   filters:
   - field: stage
     value: Lost
+  value_format_name: decimal_0
 
 - name: average_probability_to_close
   field_type: measure

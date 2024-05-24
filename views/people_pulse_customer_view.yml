@@ -3,6 +3,7 @@ type: view
 name: people_pulse_customer
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER
+default_date: account.contract_start_date
 identifiers:
 - name: account_id
   type: foreign
@@ -41,6 +42,11 @@ fields:
   type: string
   sql: ${TABLE}."EMAIL"
 
+- name: number_of_customers
+  field_type: measure
+  type: count_distinct
+  sql: ${TABLE}.customer_id
+  description: This is the number of customers/users who are using the product, not the unique accounts paying us
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
