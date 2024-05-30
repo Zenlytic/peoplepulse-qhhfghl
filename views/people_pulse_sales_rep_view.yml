@@ -17,6 +17,7 @@ fields:
 - name: name
   field_type: dimension
   type: string
+  label: Name
   sql: ${TABLE}."NAME"
   searchable: true
 
