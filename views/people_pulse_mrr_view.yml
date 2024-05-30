@@ -30,7 +30,7 @@ fields:
 - name: mrr
   field_type: dimension
   type: number
-  sql: ${TABLE}."MRR"
+  sql: ${TABLE}."MRR" / 12
 
 - name: date
   field_type: dimension_group
