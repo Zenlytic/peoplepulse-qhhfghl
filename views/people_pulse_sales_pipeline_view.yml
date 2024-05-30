@@ -4,6 +4,7 @@ name: sales_pipeline
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_SALES_PIPELINE
 default_date: expected_close_date
+description: When asked questions about common pipeline terms , use these definitions, Lead = 'MQL', 'Demo' and Opportunity = 'Qualified Opportunity', 'Pilot', 'Decision & Compliance'
 identifiers:
 - name: sales_rep_id
   type: primary
