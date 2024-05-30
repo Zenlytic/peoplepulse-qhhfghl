@@ -92,6 +92,16 @@ fields:
   sql: ${deal_size} * ${probability_to_close} / 100
   value_format_name: usd
 
+- name: closed_won_usd
+  field_type: measure
+  type: sum
+  description: The total dollars for deals that have been won (closed and successful).
+  sql: ${deal_size}
+  filters:
+  - field: stage
+    value: Closed Won
+  value_format_name: usd
+
 - name: count_won_opportunities
   field_type: measure
   type: count

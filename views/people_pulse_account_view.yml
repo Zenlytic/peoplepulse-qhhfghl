@@ -17,6 +17,7 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."ANNUAL_REVENUE"
+    hidden: true
   - name: contact_email
     field_type: dimension
     type: string

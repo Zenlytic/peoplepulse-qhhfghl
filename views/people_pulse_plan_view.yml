@@ -41,7 +41,13 @@ fields:
   description: The sum of daily quotas for all sales representatives.
   sql: ${daily_quota}
 
-
+- name: quota_attainment
+  field_type: measure
+  type: number
+  is_merged_result: true
+  description: The total closed won in usd divided by the sum of daily quotas for all sales representatives.
+  sql:  ${sales_pipeline.closed_won_usd} / nullif(${total_daily_quota}, 0)
+  
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
 # in your table.
