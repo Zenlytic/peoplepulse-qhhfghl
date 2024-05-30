@@ -29,7 +29,7 @@ fields:
 - name: stage
   field_type: dimension
   type: string
-  sql: ${TABLE}."STAGE"
+  sql: case when ${TABLE}."STAGE" in ('Proposal', 'Lead Generation') then 'MQL' when ${TABLE}."STAGE" = 'Qualification' then 'Demo' when ${TABLE}."STAGE" = 'Initial Contact' then 'Qualified Opportunity' when ${TABLE}."STAGE" = 'Negotiation' then 'Pilot' when ${TABLE}."STAGE" = 'Meeting' then 'Decision & Compliance' else ${TABLE}."STAGE" end
   searchable: true
 
 - name: probability_to_close
