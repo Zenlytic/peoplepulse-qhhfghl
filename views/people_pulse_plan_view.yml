@@ -6,7 +6,7 @@ sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_PLAN
 default_date: date
 identifiers:
 - name: sales_rep_id
-  type: primary
+  type: foreign
   sql: ${sales_rep_id}
 fields:
 - name: sales_rep_id

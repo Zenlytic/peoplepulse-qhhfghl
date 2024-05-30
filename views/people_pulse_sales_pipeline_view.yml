@@ -7,7 +7,7 @@ default_date: expected_close_date
 description: When asked questions about common pipeline terms , use these definitions, Lead = 'MQL', 'Demo' and Opportunity = 'Qualified Opportunity', 'Pilot', 'Decision & Compliance'
 identifiers:
 - name: sales_rep_id
-  type: primary
+  type: foreign
   sql: ${sales_rep_id}
 fields:
 - name: sales_rep_id
