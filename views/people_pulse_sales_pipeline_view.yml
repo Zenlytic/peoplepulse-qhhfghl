@@ -46,7 +46,7 @@ fields:
 - name: deal_size
   field_type: dimension
   type: number
-  sql: ${TABLE}."DEAL_SIZE"
+  sql: ${TABLE}."DEAL_SIZE" * 0.15
 
 - name: expected_close_date
   field_type: dimension_group
