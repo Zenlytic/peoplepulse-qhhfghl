@@ -15,6 +15,7 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."SOURCE"
+  searchable: true
 
 - name: spend
   field_type: dimension
@@ -25,6 +26,7 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."CHANNEL"
+  searchable: true
 
 - name: reach
   field_type: dimension
@@ -40,6 +42,7 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."CAMPAIGN"
+  searchable: true
 
 - name: date
   field_type: dimension_group

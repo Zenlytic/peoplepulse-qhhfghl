@@ -21,6 +21,24 @@ fields:
   sql: ${TABLE}."OPPORTUNITY"
   searchable: true
 
+- name: channel
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."CHANNEL"
+  searchable: true
+
+- name: source
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."SOURCE"
+  searchable: true
+
+- name: campaign
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."CAMPAIGN"
+  searchable: true
+
 - name: lead
   field_type: dimension
   type: string
