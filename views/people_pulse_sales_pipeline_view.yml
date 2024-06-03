@@ -9,6 +9,9 @@ identifiers:
 - name: sales_rep_id
   type: foreign
   sql: ${sales_rep_id}
+- name: product_id
+  type: foreign
+  sql: ${product_id}
 fields:
 - name: sales_rep_id
   field_type: dimension
@@ -56,10 +59,17 @@ fields:
   type: number
   sql: ${TABLE}."PROBABILITY_TO_CLOSE"
 
+- name: product_id
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."PRODUCT_ID"
+  hidden: yes
+
 - name: product
   field_type: dimension
   type: string
   sql: ${TABLE}."PRODUCT"
+  hidden: yes
 
 - name: deal_size
   field_type: dimension
