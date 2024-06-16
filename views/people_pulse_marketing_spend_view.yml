@@ -37,6 +37,7 @@ fields:
   field_type: dimension
   type: number
   sql: ${TABLE}."CONVERSION_RATE"
+  hidden: true
 
 - name: campaign
   field_type: dimension
@@ -60,6 +61,12 @@ fields:
   - year
   sql: ${TABLE}."DATE"
 
+- name: number_of_campaigns_run
+  field_type: measure
+  type: count_distinct
+  description: The total number of unique camaigns run.
+  sql: ${campaign}
+
 - name: total_engagement
   field_type: measure
   type: sum
@@ -75,16 +82,9 @@ fields:
 
 - name: total_reach
   field_type: measure
-  type: number
+  type: sum
   description: The total sum of reach across all marketing channels.
   sql: ${reach}
-
-- name: average_conversion_rate
-  field_type: measure
-  type: average
-  description: The average conversion rate across all campaigns.
-  sql: ${conversion_rate}
-  value_format_name: percent_1
 
 - name: spend_to_reach_ratio
   field_type: measure
