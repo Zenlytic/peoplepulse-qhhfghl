@@ -25,6 +25,8 @@ fields:
   field_type: dimension
   type: number
   sql: ${TABLE}."EVENT_ID"
+  hidden: true
+  primary_key: true
 
 - name: customer_id
   field_type: dimension
