@@ -8,7 +8,7 @@ identifiers:
 - name: customer_id
   type: foreign
   sql: ${customer_id}
-  allowed_fanouts: [event]
+  allowed_fanouts: [events]
 fields:
 - name: customer_id
   field_type: dimension
