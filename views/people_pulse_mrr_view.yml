@@ -46,7 +46,7 @@ fields:
   - month_of_year
   - quarter
   - year
-  sql: ${TABLE}."DATE"
+  sql: cast(${TABLE}."DATE" as timestamp)
 
 - name: total_mrr
   field_type: measure
