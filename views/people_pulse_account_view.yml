@@ -13,6 +13,8 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."ACCOUNT_ID"
+    hidden: true
+    primary_key: true
   - name: annual_revenue
     field_type: dimension
     type: number
