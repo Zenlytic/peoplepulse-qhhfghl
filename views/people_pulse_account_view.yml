@@ -37,7 +37,7 @@ fields:
   - name: size
     field_type: dimension
     type: number
-    sql: ${TABLE}."SIZE1"
+    sql: ${TABLE}."SIZE"
   - name: contact_name
     field_type: dimension
     type: string
