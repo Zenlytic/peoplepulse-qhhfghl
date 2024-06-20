@@ -6,9 +6,16 @@ sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_MRR
 default_date: date
 identifiers:
 - name: account_id
-  type: primary
+  type: foreign
   sql: ${account_id}
 fields:
+- name: id
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."ID"
+  hidden: true
+  primary_key: true
+
 - name: account_id
   field_type: dimension
   type: number
