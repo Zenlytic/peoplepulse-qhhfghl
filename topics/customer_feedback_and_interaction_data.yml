@@ -1,0 +1,35 @@
+type: topic
+label: Customer Feedback and Interaction Data
+base_view: nps_survey
+model_name: peoplepulse_model
+description: This data model integrates customer feedback from NPS surveys, customer
+  details, event interactions with the product, and account information. The NPS survey
+  captures customer feedback through scores and comments, tracking individual customer
+  IDs. The 'customer' view provides detailed user information related to individuals
+  using the product, rather than the purchasing companies, highlighting customer names,
+  contact info, and demographics. The 'events' view logs user interactions with the
+  product across different devices and browsers, linking activities to unique user
+  IDs and known customers. Lastly, the 'account' view contains information about the
+  purchasing companies, including contact details, industry, and account status.
+zoe_description: This dataset covers customer feedback via NPS surveys, detailed user
+  information, interactions with the product, and company account details. Use the
+  'nps_survey' for feedback and scores, the 'customer' for personal user info, 'events'
+  for product interaction data, and 'account' for company-level insights. This structure
+  supports a comprehensive understanding of user product engagement and feedback.
+hidden: false
+views:
+  customer:
+    join:
+      join_type: left_outer
+      relationship: many_to_one
+      sql_on: ${nps_survey.customer_id}=${customer.customer_id}
+  events:
+    join:
+      join_type: left_outer
+      relationship: many_to_many
+      sql_on: ${nps_survey.customer_id}=${events.customer_id}
+  account:
+    join:
+      join_type: left_outer
+      relationship: many_to_one
+      sql_on: ${customer.account_id}=${account.account_id}

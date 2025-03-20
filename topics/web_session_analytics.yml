@@ -1,0 +1,22 @@
+type: topic
+label: Web Session Analytics
+base_view: web_session
+model_name: peoplepulse_model
+description: The 'Web Session Analytics' view captures data related to user interactions
+  on the marketing website. It includes details such as session identifiers, user
+  identifiers, geographical location, and engagement metrics like bounce rate and
+  session duration. This information is crucial for understanding user behavior and
+  website performance. Data fields include session ID, user ID, location, bounce rate,
+  referral source, session duration, device type, browser, and timestamps. Aggregated
+  metrics such as total sessions, unique users, average bounce rate and session duration,
+  total page views, and average page views per session provide insight into overall
+  site engagement and user experience.
+zoe_description: The 'Web Session Analytics' view collects data about user visits
+  to the marketing website, focusing on key engagement metrics like bounce rate and
+  session duration. Each session records details such as its ID, user ID, and geographical
+  location without identifying logged-in product users. It includes data on device
+  type and browser used, as well as aggregated sitewide metrics like total sessions,
+  unique users, and average page views. LLM-based agents should use this view for
+  analyzing marketing site user behavior and engagement trends.
+hidden: false
+views: {}

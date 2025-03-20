@@ -1,0 +1,33 @@
+type: topic
+label: Product Usage Data Model
+base_view: events
+model_name: peoplepulse_model
+description: This data model captures detailed information about product interactions
+  and user demographics. The 'events' view tracks individual user actions on the product,
+  identified by USER_ID and related back to known customers. Key attributes include
+  EVENT_TYPE, BROWSER, DEVICE_TYPE, OS, and a timestamp. The 'customer' view holds
+  information about product users, noted by CUSTOMER_ID, and includes demographic
+  details like PHONE, EMAIL, and ADDRESS. The 'account' view represents overarching
+  companies that hold contracts for the product, detailing account-specific attributes
+  such as ACCOUNT_NAME, INDUSTRY, and various lifecycle markers like RENEWAL and CHURN
+  status. Together, these views allow for detailed analysis of product engagement,
+  user profiles, and account management metrics.
+zoe_description: 'This model focuses on product usage analytics through three primary
+  views: ''events'' tracks user interactions with attributes like EVENT_TYPE and DEVICE
+  details, linking back to CUSTOMER_IDs; ''customer'' stores personal details linked
+  to CUSTOMER_IDs like EMAIL and PHONE; ''account'' represents corporate-level data,
+  capturing contract and company insights like INDUSTRY and CHURN metrics. Use this
+  model to understand user behavior, customer demographics, and account-level dynamics
+  for strategic insights.'
+hidden: false
+views:
+  customer:
+    join:
+      join_type: left_outer
+      relationship: many_to_one
+      sql_on: ${events.customer_id}=${customer.customer_id}
+  account:
+    join:
+      join_type: left_outer
+      relationship: many_to_one
+      sql_on: ${customer.account_id}=${account.account_id}

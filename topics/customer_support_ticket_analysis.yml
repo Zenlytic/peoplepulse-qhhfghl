@@ -1,0 +1,33 @@
+type: topic
+label: Customer Support Ticket Analysis
+base_view: ticket
+model_name: peoplepulse_model
+description: This model encompasses data related to customer support tickets, focusing
+  on ticket resolution, customer satisfaction, and related customer and account details.
+  The 'ticket' view provides insights into individual tickets through fields such
+  as TICKET_ID, CUSTOMER_ID, CREATOR_ID, ASSIGNEE_ID, RESOLUTION_TIME, and CUSTOMER_SATISFACTION_SCORE.
+  It also includes calculated averages like AVERAGE_SATISFACTION_SCORE and AVERAGE_RESOLUTION_TIME.
+  The 'customer' view details the individuals who raise these tickets, distinguished
+  by CUSTOMER_ID and includes personal information like PHONE, EMAIL, and CUSTOMER_NAME.
+  The 'account' view aggregates information about the businesses holding accounts,
+  including contract-related fields and industry information. This model helps analyze
+  support tickets' efficiency and customer satisfaction, aiding in improving service
+  for both individual users and business accounts.
+zoe_description: The Customer Support Ticket Analysis model integrates data from multiple
+  views. 'ticket' tracks support requests, including assignees, resolution times,
+  and satisfaction scores. 'customer' captures individual user details like name,
+  contact, and ID. 'account' summarizes business account specifics, including contract
+  timelines and industry sector. Use this model to understand relationships between
+  ticket handling efficiency, customer sentiment, and account management outcomes.
+hidden: false
+views:
+  customer:
+    join:
+      join_type: left_outer
+      relationship: many_to_one
+      sql_on: ${ticket.customer_id}=${customer.customer_id}
+  account:
+    join:
+      join_type: left_outer
+      relationship: many_to_one
+      sql_on: ${customer.account_id}=${account.account_id}

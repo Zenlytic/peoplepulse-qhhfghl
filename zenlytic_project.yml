@@ -4,5 +4,7 @@ model-paths:
 - models
 name: peoplepulse
 profile: demo
+topic-paths:
+- topics
 view-paths:
 - views
