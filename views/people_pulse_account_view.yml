@@ -16,6 +16,7 @@ fields:
   primary_key: true
   sql: ${TABLE}."ACCOUNT_ID"
 
+
 - name: annual_revenue
   field_type: dimension
   type: number

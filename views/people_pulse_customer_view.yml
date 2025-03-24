@@ -19,6 +19,8 @@ fields:
   type: number
   sql: ${TABLE}."ACCOUNT_ID"
 
+# hello how are you
+
 - name: customer_id
   field_type: dimension
   type: number
