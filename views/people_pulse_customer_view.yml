@@ -20,6 +20,7 @@ fields:
   sql: ${TABLE}."ACCOUNT_ID"
 
 # hello how are you
+# you help me
 
 - name: customer_id
   field_type: dimension
