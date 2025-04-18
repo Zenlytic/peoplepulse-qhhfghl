@@ -51,7 +51,10 @@ fields:
   - week_of_year
   - month
   - month_of_year
-  - quarter
+  - fiscal_month
+  - fiscal_quarter
+  - fiscal_quarter_of_year
+  - fiscal_year
   - year
   sql: cast(${TABLE}."DATE" as timestamp)
 

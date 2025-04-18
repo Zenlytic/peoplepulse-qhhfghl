@@ -70,6 +70,10 @@ fields:
   - month
   - month_of_year
   - quarter
+  - fiscal_month
+  - fiscal_quarter
+  - fiscal_quarter_of_year
+  - fiscal_year
   - year
   sql: ${TABLE}."EVENT_TIME"
 
