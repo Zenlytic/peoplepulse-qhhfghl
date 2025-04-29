@@ -3,7 +3,7 @@ type: view
 name: invoice
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_INVOICE
-default_date: invoice_date
+# default_date: invoice_date
 identifiers:
 - name: invoice_id
   type: primary
