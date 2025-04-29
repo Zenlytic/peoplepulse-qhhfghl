@@ -1,10 +1,12 @@
 version: 1
 type: view
 name: sales_pipeline
+description: When asked questions about common pipeline terms , use these definitions,
+  Lead = 'MQL', 'Demo' and Opportunity = 'Qualified Opportunity', 'Pilot', 'Decision
+  & Compliance'
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_SALES_PIPELINE
 default_date: expected_close_date
-description: When asked questions about common pipeline terms , use these definitions, Lead = 'MQL', 'Demo' and Opportunity = 'Qualified Opportunity', 'Pilot', 'Decision & Compliance'
 identifiers:
 - name: sales_rep_id
   type: foreign
@@ -17,6 +19,12 @@ fields:
   field_type: dimension
   type: number
   sql: ${TABLE}."SALES_REP_ID"
+
+- name: product_id
+  field_type: dimension
+  type: string
+  hidden: true
+  sql: ${TABLE}."PRODUCT_ID"
 
 - name: opportunity
   field_type: dimension
@@ -51,7 +59,11 @@ fields:
 - name: stage
   field_type: dimension
   type: string
-  sql: case when ${TABLE}."STAGE" in ('Proposal', 'Lead Generation') then 'MQL' when ${TABLE}."STAGE" = 'Qualification' then 'Demo' when ${TABLE}."STAGE" = 'Initial Contact' then 'Qualified Opportunity' when ${TABLE}."STAGE" = 'Negotiation' then 'Pilot' when ${TABLE}."STAGE" = 'Meeting' then 'Decision & Compliance' else ${TABLE}."STAGE" end
+  sql: case when ${TABLE}."STAGE" in ('Proposal', 'Lead Generation') then 'MQL' when
+    ${TABLE}."STAGE" = 'Qualification' then 'Demo' when ${TABLE}."STAGE" = 'Initial
+    Contact' then 'Qualified Opportunity' when ${TABLE}."STAGE" = 'Negotiation' then
+    'Pilot' when ${TABLE}."STAGE" = 'Meeting' then 'Decision & Compliance' else ${TABLE}."STAGE"
+    end
   searchable: true
 
 - name: probability_to_close
@@ -59,17 +71,11 @@ fields:
   type: number
   sql: ${TABLE}."PROBABILITY_TO_CLOSE"
 
-- name: product_id
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."PRODUCT_ID"
-  hidden: yes
-
 - name: product
   field_type: dimension
   type: string
+  hidden: true
   sql: ${TABLE}."PRODUCT"
-  hidden: yes
 
 - name: deal_size
   field_type: dimension
@@ -99,59 +105,59 @@ fields:
   field_type: measure
   type: sum
   description: The sum of the deal sizes for all opportunities.
-  sql: ${deal_size}
   value_format_name: usd
+  sql: ${deal_size}
 
 - name: average_deal_size
   field_type: measure
   type: average
   description: The average size of deals across all opportunities.
-  sql: ${deal_size}
   value_format_name: usd
+  sql: ${deal_size}
 
 - name: count_opportunities
   field_type: measure
   type: count
   description: The total number of opportunities in the pipeline.
-  sql: ${opportunity}
   value_format_name: decimal_0
+  sql: ${opportunity}
 
 - name: weighted_deal_value
   field_type: measure
   type: number
   description: The total deal size weighted by the probability to close for each opportunity.
-  sql: ${deal_size} * ${probability_to_close} / 100
   value_format_name: usd
+  sql: ${deal_size} * ${probability_to_close} / 100
 
 - name: closed_won_usd
   field_type: measure
   type: sum
   description: The total dollars for deals that have been won (closed and successful).
+  value_format_name: usd
   sql: ${deal_size}
   filters:
   - field: stage
     value: Closed Won
-  value_format_name: usd
 
 - name: count_won_opportunities
   field_type: measure
   type: count
   description: The number of opportunities that have been won (closed and successful).
+  value_format_name: decimal_0
   sql: ${opportunity}
   filters:
   - field: stage
     value: Closed Won
-  value_format_name: decimal_0
 
 - name: count_lost_opportunities
   field_type: measure
   type: count
   description: The number of opportunities that have been lost (closed and unsuccessful).
+  value_format_name: decimal_0
   sql: ${opportunity}
   filters:
   - field: stage
     value: Closed Lost
-  value_format_name: decimal_0
 
 - name: average_probability_to_close
   field_type: measure
@@ -159,45 +165,8 @@ fields:
   description: The average probability to close across all opportunities.
   sql: ${probability_to_close}
 
-
-# To help you get started with defining fields, we've included a quick guide which you can delete at any time.
-# The following keys are required for all fields. All the fields above have been created based on the columns
-# in your table.
-
-# - name: (Required) Name of the field. This is used to reference the field in the data model.
-#   field_type: The type of field. This can be 'dimension', 'measure', or 'dimension_group'.
-#   type: This is the data type for a field.
-#         For dimensions, this can be: string, yesno, tier, number
-#         For measures, this is an aggregation type: number, sum, average, count, count_distinct
-#         For dimension groups this can be: time, duration
-#   sql: (Required) This is the SQL expression for the field. You can reference other fields in the table by
-#        using the `name` of the field. For example, if you have a field with name: 'revenue' in the view
-#        'orders', you can reference it as: ${orders.revenue}.
-#        For more information, see https://docs.zenlytic.com/docs/data_modeling/
-#
-
-# The following keys are optional but useful for providing additional context to the field in the UI and Zoe.
-#
-#   label: The is the user-facing label for the field, displayed in the UI and used by Zoe in chat.
-#          It's different from the `name` field, which is used for referencing the field in the data model.
-#
-#   description: This is used to provide context to users about the field.
-#
-#   searchable: This allows Zenlytic to index the categories and allows Zoe to properly use filters.
-#               For example, if you have a field called 'state' and you want to be able to filter
-#               on different states, you would set this to 'yes'.
-#
-#   zoe_description: This is used to provide context to Zoe about the field.
-#                    When this is not provided, Zoe will use the description field.
-#
-#   hidden: This is used to hide the field from both the UI and Zoe. By default, this is set to 'no'.
-#
-#   value_format_name: This is the format to use when displaying the field. Follow this link to see the
-#                      available formats. https://docs.zenlytic.com/docs/data_modeling/formatting
-#
-#   synonyms: This is a list of strings that act as synonyms for the field label.
-#
-#   filters: This is a list of filters that can be applied to the field.
-#
-# For a comprehensive list of options that can be specified for a field, or for more detailed information,
-# please visit: https://docs.zenlytic.com/docs/data_modeling/data_modeling
+- name: 8fd52474298e4b55a7a2e3dfed708a13
+  field_type: measure
+  type: count
+  label: Count Deal Size
+  sql: ${TABLE}."DEAL_SIZE" * 0.15

@@ -1,9 +1,8 @@
-connection: demo
-name: peoplepulse_model
-type: model
 version: 1
+type: model
+name: peoplepulse_model
+connection: demo
 fiscal_month_offset: 1
-
 access_grants:
 - name: exec_only
   user_attribute: department
@@ -15,17 +14,20 @@ mappings:
     fields:
     - marketing_spend.channel
     - sales_pipeline.channel
-    description: The marketing channel that the customer came through before entering the pipeline.
+    description: The marketing channel that the customer came through before entering
+      the pipeline.
     group_label: Acquisition
   source:
     fields:
     - sales_pipeline.source
     - marketing_spend.source
-    description: The marketing source that the customer came through before entering the pipeline.
+    description: The marketing source that the customer came through before entering
+      the pipeline.
     group_label: Acquisition
   campaign:
     fields:
     - sales_pipeline.campaign
     - marketing_spend.campaign
-    description: The marketing campaign that the customer came through before entering the pipeline.
+    description: The marketing campaign that the customer came through before entering
+      the pipeline.
     group_label: Acquisition

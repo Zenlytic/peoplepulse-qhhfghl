@@ -12,15 +12,15 @@ fields:
 - name: id
   field_type: dimension
   type: number
-  sql: ${TABLE}."ID"
   hidden: true
   primary_key: true
+  sql: ${TABLE}."ID"
 
 - name: account_id
   field_type: dimension
   type: number
-  sql: ${TABLE}."ACCOUNT_ID"
   hidden: true
+  sql: ${TABLE}."ACCOUNT_ID"
 
 - name: plan_type
   field_type: dimension
@@ -62,23 +62,24 @@ fields:
   field_type: measure
   type: sum
   description: The total monthly recurring revenue.
-  sql: ${mrr}
   value_format_name: usd
+  sql: ${mrr}
   non_additive_dimension:
-      name: date_raw
-      window_choice: max
+    name: date_raw
+    window_choice: max
+
 
 - name: total_arr
   field_type: measure
   type: sum
   description: The total annual recurring revenue.
-  sql: ${mrr} * 12
   value_format_name: usd
+  sql: ${mrr} * 12
   synonyms:
-    - sales
+  - sales
   non_additive_dimension:
-      name: date_raw
-      window_choice: max
+    name: date_raw
+    window_choice: max
 
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
