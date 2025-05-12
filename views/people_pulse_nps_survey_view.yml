@@ -60,3 +60,11 @@ fields:
   type: count
   value_format_name: decimal_0
   sql: ${customer_id}
+
+- name: vrbhygchadxcmyapuegmjbznnhpjjcpbovrthlrt
+  field_type: measure
+  type: average
+  label: Duplicate Average Nps Survey Score
+  sql: ${survey_score}
+  canon_date: nps_survey.survey_date
+  update_where_timeframe: true
