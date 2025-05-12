@@ -69,6 +69,7 @@ fields:
     window_choice: max
 
 
+
 - name: total_arr
   field_type: measure
   type: sum
