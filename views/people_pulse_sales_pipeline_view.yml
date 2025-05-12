@@ -140,6 +140,7 @@ fields:
     value: Closed Won
 
 
+
 - name: count_won_opportunities
   field_type: measure
   type: count
@@ -149,6 +150,7 @@ fields:
   filters:
   - field: stage
     value: Closed Won
+
 
 
 - name: count_lost_opportunities
@@ -162,6 +164,7 @@ fields:
     value: Closed Lost
 
 
+
 - name: average_probability_to_close
   field_type: measure
   type: average
@@ -169,6 +172,16 @@ fields:
   sql: ${probability_to_close}
 
 - name: egmkfnjpbhcjqqmfqqhojhmhqipumsauxmebkrzy
+  field_type: measure
+  type: average
+  label: Duplicate Average Deal Size
+  description: The average size of deals across all opportunities.
+  value_format_name: usd
+  sql: ${deal_size}
+  canon_date: sales_pipeline.expected_close_date
+  update_where_timeframe: true
+
+- name: wutmblphdadkznjpapjrpomohwjcgipezkgpdkyl
   field_type: measure
   type: average
   label: Duplicate Average Deal Size
