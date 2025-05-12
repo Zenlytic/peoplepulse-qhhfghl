@@ -71,6 +71,7 @@ fields:
 
 
 
+
 - name: total_arr
   field_type: measure
   type: sum

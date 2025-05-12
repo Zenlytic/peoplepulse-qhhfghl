@@ -67,3 +67,13 @@ fields:
   description: The total number of sales representatives.
   value_format_name: decimal_0
   sql: ${sales_rep_id}
+
+- name: lpswdsclheiphkvmnzttnrzbkjilhhbmlhyouims
+  field_type: measure
+  type: average
+  label: Duplicate Average Quota
+  description: The average quota assigned to sales representatives.
+  value_format_name: usd
+  sql: ${quota}
+  canon_date: sales_rep.hire_date
+  update_where_timeframe: true

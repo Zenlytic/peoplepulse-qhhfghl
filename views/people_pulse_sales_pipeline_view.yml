@@ -141,6 +141,7 @@ fields:
 
 
 
+
 - name: count_won_opportunities
   field_type: measure
   type: count
@@ -153,6 +154,7 @@ fields:
 
 
 
+
 - name: count_lost_opportunities
   field_type: measure
   type: count
@@ -162,6 +164,7 @@ fields:
   filters:
   - field: stage
     value: Closed Lost
+
 
 
 
