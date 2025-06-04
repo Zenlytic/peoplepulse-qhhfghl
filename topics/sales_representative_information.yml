@@ -1,19 +1,21 @@
 type: topic
-label: Sales Representative Information
 base_view: sales_rep
 model_name: peoplepulse_model
-description: The Sales Representative Information topic provides detailed data about
-  each sales representative in the organization. Key fields include SALES_REP_ID,
-  a unique identifier for each representative; NAME, the full name; QUOTA, the sales
-  target assigned; EMAIL, contact information; REGION, the geographical area of responsibility;
-  and HIRE_DATE_NONE, indicating missing hire date data. It also includes AVERAGE_QUOTA,
-  which is the average target across reps, and COUNT_SALES_REPS, the total number
-  of representatives. This data is crucial for managing sales targets and performance
-  metrics.
-zoe_description: "The Sales Representative Information model records essential details\
-  \ about sales reps including their ID, name, and contact information. It tracks\
-  \ assigned sales quotas and their performance averages. The REGION field denotes\
-  \ the rep\u2019s operational area. Use this data for managing sales force allocation\
-  \ and monitoring performance trends."
-hidden: false
+label: Sales Representative Information
+description: >-
+  The Sales Representative Information topic provides detailed data about each
+  sales representative in the organization. Key fields include SALES_REP_ID, a
+  unique identifier for each representative; NAME, the full name; QUOTA, the
+  sales target assigned; EMAIL, contact information; REGION, the geographical
+  area of responsibility; and HIRE_DATE_NONE, indicating missing hire date data.
+  It also includes AVERAGE_QUOTA, which is the average target across reps, and
+  COUNT_SALES_REPS, the total number of representatives. This data is crucial
+  for managing sales targets and performance metrics.
+zoe_description: >-
+  The Sales Representative Information model records essential details about
+  sales reps including their ID, name, and contact information. It tracks
+  assigned sales quotas and their performance averages. The REGION field denotes
+  the rep’s operational area. Use this data for managing sales force allocation
+  and monitoring performance trends.
+hidden: true
 views: {}
