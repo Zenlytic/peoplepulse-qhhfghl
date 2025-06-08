@@ -11,5 +11,5 @@ description: The 'Product Information' view provides details about individual pr
 zoe_description: The 'Product Information' view contains fields for PRODUCT_ID (unique
   identifier), PRODUCT_TYPE (category), and PRODUCT_NAME (name). When interacting,
   reference these fields to identify, categorize, or search for specific products.
-hidden: false
+hidden: true
 views: {}
