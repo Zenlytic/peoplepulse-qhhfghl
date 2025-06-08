@@ -4,11 +4,7 @@ type: model
 version: 1
 fiscal_month_offset: 1
 
-access_grants:
-- name: exec_only
-  user_attribute: department
-  allowed_values:
-  - Executive
+access_grants: []
 
 mappings:
   channel:
