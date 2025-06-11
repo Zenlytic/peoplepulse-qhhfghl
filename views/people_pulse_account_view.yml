@@ -2,7 +2,7 @@ version: 1
 type: view
 name: account
 model_name: peoplepulse_model
-description: description 2
+description: description 3
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_ACCOUNT
 default_date: contract_start_date
 identifiers:
