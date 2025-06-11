@@ -7,7 +7,7 @@ sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EMPLOYEE
 identifiers:
   - name: employee_id
     type: primary
-    sql: ${employee_id}
+    sql: ${employee_id} --TODO: NJM
 fields:
   - name: employee_id
     field_type: dimension
