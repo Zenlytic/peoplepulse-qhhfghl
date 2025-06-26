@@ -1,4 +1,4 @@
-connection: demo
+connection: new_connection
 name: peoplepulse_model
 type: model
 version: 1
