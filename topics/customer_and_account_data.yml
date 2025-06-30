@@ -13,7 +13,7 @@ zoe_description: 'This dataset includes two primary views: ''customer,'' detaili
   individual user information like ID, phone, and contact details, and ''account,''
   which provides company-related data like contact email, account name, location,
   industry, and contract details. Use this data to analyze user demographics and account
-  metrics, aiding in understanding customer engagement and business account management.'
+  metrics, aiding in understanding customer engagement and business account management.jj'
 hidden: false
 views:
   account:
