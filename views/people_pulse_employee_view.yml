@@ -4,31 +4,28 @@ name: employee
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EMPLOYEE
 identifiers:
-- name: employee_id
-  type: primary
-  sql: ${employee_id}
+  - name: employee_id
+    type: primary
+    sql: ${employee_id}
 fields:
-- name: employee_id
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."EMPLOYEE_ID"
-
-- name: employee_name
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."NAME"
-  searchable: false
-
-- name: salary
-  field_type: dimension
-  type: number
-  required_access_grants:
-  - exec_only
-  sql: ${TABLE}."SALARY"
-
-- name: role
-  field_type: dimension
-  type: string
-  label: Role
-  sql: ${TABLE}."ROLE"
-  searchable: false
+  - name: employee_id
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."EMPLOYEE_ID"
+  - name: employee_name
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."NAME"
+    searchable: false
+  - name: salary
+    field_type: dimension
+    type: number
+    required_access_grants:
+      - exec_only
+    sql: ${TABLE}."SALARY"
+  - name: role
+    field_type: dimension
+    type: string
+    label: Role
+    sql: ${TABLE}."ROLE"
+    searchable: false

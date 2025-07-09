@@ -1,0 +1,45 @@
+name: test_test_jws2
+type: view
+model_name: peoplepulse_model
+sql_table_name: test_test_jws2
+fields:
+  - name: 2017_NAICS_Code
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."2017 NAICS CODE"
+    searchable: true
+  - name: 2017_NAICS_Title
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."2017 NAICS TITLE"
+    searchable: true
+  - name: GHG
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."GHG"
+    searchable: true
+  - name: Unit
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."UNIT"
+    searchable: true
+  - name: Supply_Chain_Emission_Factors_without_Margins
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."SUPPLY CHAIN EMISSION FACTORS WITHOUT MARGINS"
+    searchable: true
+  - name: Margins_of_Supply_Chain_Emission_Factors
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."MARGINS OF SUPPLY CHAIN EMISSION FACTORS"
+    searchable: true
+  - name: Supply_Chain_Emission_Factors_with_Margins
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."SUPPLY CHAIN EMISSION FACTORS WITH MARGINS"
+    searchable: true
+  - name: Reference_USEEIO_Code
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."REFERENCE USEEIO CODE"
+    searchable: true

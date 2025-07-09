@@ -1,0 +1,5 @@
+base_view: test_test_jws2
+label: test topic
+model_name: peoplepulse_model
+views: {}
+type: topic

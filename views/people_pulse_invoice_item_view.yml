@@ -5,45 +5,39 @@ model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_INVOICE_ITEM
 default_date: invoice.invoice_date
 identifiers:
-- name: invoice_id
-  type: foreign
-  sql: ${invoice_id}
-- name: product_id
-  type: foreign
-  sql: ${product_id}
+  - name: invoice_id
+    type: foreign
+    sql: ${invoice_id}
+  - name: product_id
+    type: foreign
+    sql: ${product_id}
 fields:
-- name: invoice_id
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."INVOICE_ID"
-
-- name: product_id
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."PRODUCT_ID"
-  searchable: true
-
-- name: unit_price
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."UNIT_PRICE"
-
-- name: tax_rate
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."TAX_RATE"
-
-- name: discount
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."DISCOUNT"
-
-- name: cost
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."COST"
-
-- name: quantity
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."QUANTITY"
+  - name: invoice_id
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."INVOICE_ID"
+  - name: product_id
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."PRODUCT_ID"
+    searchable: true
+  - name: unit_price
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."UNIT_PRICE"
+  - name: tax_rate
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."TAX_RATE"
+  - name: discount
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."DISCOUNT"
+  - name: cost
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."COST"
+  - name: quantity
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."QUANTITY"

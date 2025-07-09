@@ -2,21 +2,25 @@ type: topic
 label: Sales Pipeline Analysis
 base_view: sales_pipeline
 model_name: peoplepulse_model
-description: The Sales Pipeline Analysis topic provides insights into sales processes
-  and performance metrics. It includes key data points such as sales representative
-  IDs, opportunities, channels, sources, campaigns, and lead stages. The model tracks
-  metrics like probability to close, expected and total deal sizes, average deals,
-  and weighted values. It also covers performance outcomes such as closed-won deals
-  and counts of won and lost opportunities. This analysis can be enhanced by connecting
-  sales data with details from the sales_rep view, which includes representative information,
-  and product view, detailing product specifics such as type and name.
-zoe_description: 'The Sales Pipeline Analysis encompasses fields related to opportunities
-  and deal metrics, such as estimated close probabilities and deal sizes. Key identifiers
-  like sales representative IDs are included for cross-referencing. Leverage the associated
-  sales_rep view for personnel details and the product view for product information.
-  Use definitions: Lead refers to ''MQL'', ''Demo'' and Opportunity encompasses ''Qualified
-  Opportunity'', ''Pilot'', ''Decision & Compliance''. Extract patterns/trends in
-  sales performance and optimize strategies based on these insights.'
+description: >-
+  The Sales Pipeline Analysis topic provides insights into sales processes and
+  performance metrics. It includes key data points such as sales representative
+  IDs, opportunities, channels, sources, campaigns, and lead stages. The model
+  tracks metrics like probability to close, expected and total deal sizes,
+  average deals, and weighted values. It also covers performance outcomes such
+  as closed-won deals and counts of won and lost opportunities. This analysis
+  can be enhanced by connecting sales data with details from the sales_rep view,
+  which includes representative information, and product view, detailing product
+  specifics such as type and name.
+zoe_description: >-
+  The Sales Pipeline Analysis encompasses fields related to opportunities and
+  deal metrics, such as estimated close probabilities and deal sizes. Key
+  identifiers like sales representative IDs are included for cross-referencing.
+  Leverage the associated sales_rep view for personnel details and the product
+  view for product information. Use definitions: Lead refers to 'MQL', 'Demo'
+  and Opportunity encompasses 'Qualified Opportunity', 'Pilot', 'Decision &
+  Compliance'. Extract patterns/trends in sales performance and optimize
+  strategies based on these insights.
 hidden: false
 views:
   sales_rep:
