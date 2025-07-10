@@ -1,0 +1,5 @@
+base_view: farm
+label: My farm
+model_name: zenlytic_managed
+views: {}
+type: topic
