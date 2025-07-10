@@ -20,7 +20,7 @@ fields:
     type: number
     description: ''
     hidden: false
-    label: Session Id NJM
+    label: Session Id NJM2
     primary_key: false
     searchable: false
     sql: ${TABLE}."SESSION_ID"
