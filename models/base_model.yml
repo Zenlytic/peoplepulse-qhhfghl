@@ -6,9 +6,9 @@ fiscal_month_offset: 1
 
 access_grants:
 - name: exec_only
-  user_attribute: My Thing Date
+  user_attribute: My Thing
   allowed_values:
-  - '2024-03-03'
+  - 'Hey'
 
 mappings:
   channel:
