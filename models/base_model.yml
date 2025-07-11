@@ -8,7 +8,7 @@ access_grants:
 - name: exec_only
   user_attribute: My Thing Date
   allowed_values:
-  - '2024-03-03'
+  - 2024-03-03
 
 mappings:
   channel:
