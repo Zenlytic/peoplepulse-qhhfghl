@@ -5,54 +5,59 @@ model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_INVOICE
 default_date: invoice_date
 identifiers:
-  - name: invoice_id
-    type: primary
-    sql: ${invoice_id}
-  - name: account_id
-    type: foreign
-    sql: ${account_id}
+- name: invoice_id
+  type: primary
+  sql: ${invoice_id}
+- name: account_id
+  type: foreign
+  sql: ${account_id}
 fields:
-  - name: account_id
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."ACCOUNT_ID"
-  - name: invoice_id
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."INVOICE_ID"
-  - name: cadence
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."CADENCE"
-    searchable: true
-  - name: invoice_date
-    field_type: dimension_group
-    type: time
-    datatype: timestamp
-    timeframes:
-      - raw
-      - date
-      - day_of_year
-      - week
-      - week_of_year
-      - month
-      - month_of_year
-      - quarter
-      - fiscal_month
-      - fiscal_quarter
-      - fiscal_quarter_of_year
-      - fiscal_year
-      - year
-    sql: ${TABLE}."INVOICE_DATE"
-  - name: total_invoices
-    field_type: measure
-    type: count
-    description: The total number of invoices.
-    value_format_name: decimal_0
-    sql: ${invoice_id}
-  - name: total_accounts
-    field_type: measure
-    type: count_distinct
-    description: The total number of unique accounts with invoices.
-    value_format_name: decimal_0
-    sql: ${account_id}
+- name: account_id
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."ACCOUNT_ID"
+
+- name: invoice_id
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."INVOICE_ID"
+
+- name: cadence
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."CADENCE"
+  searchable: true
+
+- name: invoice_date
+  field_type: dimension_group
+  type: time
+  datatype: timestamp
+  timeframes:
+  - raw
+  - date
+  - day_of_year
+  - week
+  - week_of_year
+  - month
+  - month_of_year
+  - quarter
+  - fiscal_month
+  - fiscal_quarter
+  - fiscal_quarter_of_year
+  - fiscal_year
+  - year
+  sql: ${TABLE}."INVOICE_DATE"
+
+- name: total_invoices
+  field_type: measure
+  type: count
+  description: The total number of invoices.
+  value_format_name: decimal_0
+  sql: ${invoice_id}
+
+- name: total_accounts
+  field_type: measure
+  type: count_distinct
+  description: The total number of unique accounts with invoices.
+  value_format_name: decimal_0
+  sql: ${account_id}

@@ -4,22 +4,24 @@ name: product
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_PRODUCT
 identifiers:
-  - name: product_id
-    type: primary
-    sql: ${product_id}
+- name: product_id
+  type: primary
+  sql: ${product_id}
 fields:
-  - name: product_id
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."PRODUCT_ID"
-    searchable: true
-  - name: product_type
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."PRODUCT_TYPE"
-    searchable: true
-  - name: product_name
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."PRODUCT_NAME"
-    searchable: true
+- name: product_id
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."PRODUCT_ID"
+  searchable: true
+
+- name: product_type
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."PRODUCT_TYPE"
+  searchable: true
+
+- name: product_name
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."PRODUCT_NAME"
+  searchable: true

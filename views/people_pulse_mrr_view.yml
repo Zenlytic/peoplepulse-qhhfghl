@@ -5,70 +5,77 @@ model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_MRR
 default_date: date
 identifiers:
-  - name: account_id
-    type: foreign
-    sql: ${account_id}
+- name: account_id
+  type: foreign
+  sql: ${account_id}
 fields:
-  - name: id
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."ID"
-    hidden: true
-    primary_key: true
-  - name: account_id
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."ACCOUNT_ID"
-    hidden: true
-  - name: plan_type
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."PLAN_TYPE"
-    searchable: true
-  - name: customer_segment
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."CUSTOMER_SEGMENT"
-    searchable: true
-  - name: mrr
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."MRR" / 12
-  - name: date
-    field_type: dimension_group
-    type: time
-    datatype: timestamp
-    timeframes:
-      - raw
-      - date
-      - day_of_year
-      - week
-      - week_of_year
-      - month
-      - month_of_year
-      - fiscal_month
-      - fiscal_quarter
-      - fiscal_quarter_of_year
-      - fiscal_year
-      - year
-    sql: cast(${TABLE}."DATE" as timestamp)
-  - name: total_mrr
-    field_type: measure
-    type: sum
-    description: The total monthly recurring revenue.
-    sql: ${mrr}
-    value_format_name: usd
-    non_additive_dimension:
-      name: date_raw
-      window_choice: max
-  - name: total_arr
-    field_type: measure
-    type: sum
-    description: The total annual recurring revenue.
-    sql: ${mrr} * 12
-    value_format_name: usd
-    synonyms:
-      - sales
-    non_additive_dimension:
-      name: date_raw
-      window_choice: max
+- name: id
+  field_type: dimension
+  type: number
+  hidden: true
+  primary_key: true
+  sql: ${TABLE}."ID"
+
+- name: account_id
+  field_type: dimension
+  type: number
+  hidden: true
+  sql: ${TABLE}."ACCOUNT_ID"
+
+- name: plan_type
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."PLAN_TYPE"
+  searchable: true
+
+- name: customer_segment
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."CUSTOMER_SEGMENT"
+  searchable: true
+
+- name: mrr
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."MRR" / 12
+
+- name: date
+  field_type: dimension_group
+  type: time
+  datatype: timestamp
+  timeframes:
+  - raw
+  - date
+  - day_of_year
+  - week
+  - week_of_year
+  - month
+  - month_of_year
+  - fiscal_month
+  - fiscal_quarter
+  - fiscal_quarter_of_year
+  - fiscal_year
+  - year
+  sql: cast(${TABLE}."DATE" as timestamp)
+
+- name: total_mrr
+  field_type: measure
+  type: sum
+  description: The total monthly recurring revenue.
+  value_format_name: usd
+  sql: ${mrr}
+  non_additive_dimension:
+    name: date_raw
+    window_choice: max
+
+- name: total_arr
+  field_type: measure
+  type: sum
+  description: The total annual recurring revenue.
+  value_format_name: usd
+  sql: ${mrr} * 12
+  synonyms:
+  - sales
+  non_additive_dimension:
+    name: date_raw
+    window_choice: max
