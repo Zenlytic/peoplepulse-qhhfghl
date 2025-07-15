@@ -3,29 +3,33 @@ name: peoplepulse_model
 type: model
 version: 1
 fiscal_month_offset: 1
-
 access_grants:
-- name: exec_only
-  user_attribute: My Thing
-  allowed_values:
-  - 'Hey'
-
+  - name: exec_only
+    user_attribute: My Thing
+    allowed_values:
+      - Hey
 mappings:
   channel:
     fields:
-    - marketing_spend.channel
-    - sales_pipeline.channel
-    description: The marketing channel that the customer came through before entering the pipeline.
+      - marketing_spend.channel
+      - sales_pipeline.channel
+    description: >-
+      The marketing channel that the customer came through before entering the
+      pipeline.
     group_label: Acquisition
   source:
     fields:
-    - sales_pipeline.source
-    - marketing_spend.source
-    description: The marketing source that the customer came through before entering the pipeline.
+      - sales_pipeline.source
+      - marketing_spend.source
+    description: >-
+      The marketing source that the customer came through before entering the
+      pipeline.
     group_label: Acquisition
   campaign:
     fields:
-    - sales_pipeline.campaign
-    - marketing_spend.campaign
-    description: The marketing campaign that the customer came through before entering the pipeline.
+      - sales_pipeline.campaign
+      - marketing_spend.campaign
+    description: >-
+      The marketing campaign that the customer came through before entering the
+      pipeline.
     group_label: Acquisition

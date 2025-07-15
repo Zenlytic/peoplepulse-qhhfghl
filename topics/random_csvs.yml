@@ -1,0 +1,5 @@
+base_view: stars_type
+label: Random CSVs
+model_name: zenlytic_managed
+views: {}
+type: topic
