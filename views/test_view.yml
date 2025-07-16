@@ -1,6 +1,6 @@
 version: 1
 type: view
-name: derpy_derp
+name: crazy
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_MARKETING_SPEND
 default_date: date
