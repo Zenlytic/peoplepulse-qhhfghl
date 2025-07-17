@@ -1,0 +1,5 @@
+base_view: water_quality
+label: test topic jws
+model_name: zenlytic_managed
+views: {}
+type: topic
