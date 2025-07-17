@@ -14,11 +14,6 @@ fields:
     type: string
     sql: ${TABLE}."UNIT_ID"
     searchable: true
-  - name: Read_Date
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."READ_DATE"
-    searchable: true
   - name: Salinity
     field_type: dimension
     type: number
@@ -26,7 +21,7 @@ fields:
     searchable: true
   - name: Dissolved_Oxygen
     field_type: dimension
-    type: string
+    type: number
     sql: ${TABLE}."DISSOLVED_OXYGEN"
     searchable: true
   - name: pH
@@ -84,11 +79,11 @@ fields:
     type: number
     sql: ${TABLE}."YEAR"
     searchable: true
-  - name: DateVerified
+  - name: Read_Date
     field_type: dimension_group
     type: time
-    sql: ${TABLE}."DATEVERIFIED"
-    timeframes:
+    sql: ${TABLE}."READ_DATE"
+    timeframes: &ref_0
       - date
       - week
       - month
@@ -97,3 +92,8 @@ fields:
       - day_of_year
       - week_of_year
       - month_of_year
+  - name: DateVerified
+    field_type: dimension_group
+    type: time
+    sql: ${TABLE}."DATEVERIFIED"
+    timeframes: *ref_0
