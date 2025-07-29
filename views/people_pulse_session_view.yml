@@ -1,4 +1,4 @@
-version: 1
+version: 2
 type: view
 name: web_session
 description: The sessions are just for the marketing site, so we don't have information
