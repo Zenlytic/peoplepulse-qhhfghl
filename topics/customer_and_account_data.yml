@@ -1,7 +1,7 @@
 type: topic
-label: Customer and Account Data
 base_view: customer
 model_name: peoplepulse_model
+label: Customer and Account Data
 description: >-
   This dataset represents information about individuals and their associated
   accounts in a product ecosystem. The 'customer' view contains details about

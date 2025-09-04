@@ -15,25 +15,30 @@ fields:
     sql: ${TABLE}."ID"
     hidden: true
     primary_key: true
+
   - name: account_id
     field_type: dimension
     type: number
     sql: ${TABLE}."ACCOUNT_ID"
     hidden: true
+
   - name: plan_type
     field_type: dimension
     type: string
     sql: ${TABLE}."PLAN_TYPE"
     searchable: true
+
   - name: customer_segment
     field_type: dimension
     type: string
     sql: ${TABLE}."CUSTOMER_SEGMENT"
     searchable: true
+
   - name: mrr
     field_type: dimension
     type: number
     sql: ${TABLE}."MRR" / 12
+
   - name: date
     field_type: dimension_group
     type: time
@@ -52,6 +57,7 @@ fields:
       - fiscal_year
       - year
     sql: cast(${TABLE}."DATE" as timestamp)
+
   - name: total_mrr
     field_type: measure
     type: sum
@@ -61,6 +67,7 @@ fields:
     non_additive_dimension:
       name: date_raw
       window_choice: max
+
   - name: total_arr
     field_type: measure
     type: sum

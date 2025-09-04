@@ -1,7 +1,7 @@
 type: topic
-label: Marketing Spend Analysis
 base_view: marketing_spend
 model_name: peoplepulse_model
+label: Marketing Spend Analysis
 description: >-
   The 'Marketing Spend Analysis' view captures key metrics related to marketing
   campaigns and expenditures. It includes fields such as engagement, source,

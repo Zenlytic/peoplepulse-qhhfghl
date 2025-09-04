@@ -1,7 +1,7 @@
 type: topic
-label: Web Session Analytics
 base_view: web_session
 model_name: peoplepulse_model
+label: Web Session Analytics
 description: >-
   The 'Web Session Analytics' view captures data related to user interactions on
   the marketing website. It includes details such as session identifiers, user

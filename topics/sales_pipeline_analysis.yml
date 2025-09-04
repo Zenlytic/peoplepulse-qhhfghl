@@ -1,7 +1,7 @@
 type: topic
-label: Sales Pipeline Analysis
 base_view: sales_pipeline
 model_name: peoplepulse_model
+label: Sales Pipeline Analysis
 description: >-
   The Sales Pipeline Analysis topic provides insights into sales processes and
   performance metrics. It includes key data points such as sales representative

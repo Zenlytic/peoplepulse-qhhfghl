@@ -1,7 +1,7 @@
 type: topic
-label: Employee Information
 base_view: employee
 model_name: peoplepulse_model
+label: Employee Information
 description: >-
   The 'Employee Information' dataset contains essential details about employees
   within an organization. Each record is structured to include the following

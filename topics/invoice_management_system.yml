@@ -1,7 +1,7 @@
 type: topic
-label: Invoice Management System
 base_view: invoice_item
 model_name: peoplepulse_model
+label: Invoice Management System
 description: >-
   This data model provides a comprehensive view of an Invoice Management System,
   capturing essential details on transactions and related entities. The

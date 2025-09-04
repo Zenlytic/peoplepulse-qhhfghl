@@ -19,30 +19,36 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."ACCOUNT_ID"
+
   - name: customer_id
     field_type: dimension
     type: number
     sql: ${TABLE}."CUSTOMER_ID"
+
   - name: phone
     field_type: dimension
     type: string
     sql: ${TABLE}."PHONE"
     searchable: false
+
   - name: customer_name
     field_type: dimension
     type: string
     sql: ${TABLE}."CUSTOMER_NAME"
     searchable: false
+
   - name: address
     field_type: dimension
     type: string
     sql: ${TABLE}."ADDRESS"
     searchable: false
+
   - name: email
     field_type: dimension
     type: string
     sql: ${TABLE}."EMAIL"
     searchable: false
+
   - name: number_of_customers
     field_type: measure
     type: count

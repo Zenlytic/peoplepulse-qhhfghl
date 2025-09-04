@@ -1,7 +1,7 @@
 type: topic
-label: Sales Representative Information
 base_view: sales_rep
 model_name: peoplepulse_model
+label: Sales Representative Information
 description: >-
   The Sales Representative Information topic provides detailed data about each
   sales representative in the organization. Key fields include SALES_REP_ID, a

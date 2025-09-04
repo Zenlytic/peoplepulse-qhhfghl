@@ -1,7 +1,7 @@
 type: topic
-label: Account Information Summary
 base_view: account
 model_name: peoplepulse_model
+label: Account Information Summary
 description: >-
   The Account Information Summary provides a comprehensive view of various
   accounts, capturing essential details such as contact information, location,

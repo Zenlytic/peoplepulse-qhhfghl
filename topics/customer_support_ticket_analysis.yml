@@ -1,7 +1,7 @@
 type: topic
-label: Customer Support Ticket Analysis
 base_view: ticket
 model_name: peoplepulse_model
+label: Customer Support Ticket Analysis
 description: >-
   This model encompasses data related to customer support tickets, focusing on
   ticket resolution, customer satisfaction, and related customer and account

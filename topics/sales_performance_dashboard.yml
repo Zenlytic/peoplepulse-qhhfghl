@@ -1,7 +1,7 @@
 type: topic
-label: Sales Performance Dashboard
 base_view: people_pulse_plan
 model_name: peoplepulse_model
+label: Sales Performance Dashboard
 description: >-
   The Sales Performance Dashboard provides insights into the quota attainment of
   sales representatives on a daily basis. It integrates data from the

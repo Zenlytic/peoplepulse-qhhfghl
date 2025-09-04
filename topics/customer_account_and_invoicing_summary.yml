@@ -1,7 +1,7 @@
 type: topic
-label: Customer Account and Invoicing Summary
 base_view: invoice
 model_name: peoplepulse_model
+label: Customer Account and Invoicing Summary
 description: >-
   This data model focuses on the relationship between customer accounts and
   their invoicing details. The `invoice` view provides insights into billing

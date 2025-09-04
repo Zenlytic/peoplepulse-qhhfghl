@@ -16,27 +16,33 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."INVOICE_ID"
+
   - name: product_id
     field_type: dimension
     type: string
     sql: ${TABLE}."PRODUCT_ID"
     searchable: true
+
   - name: unit_price
     field_type: dimension
     type: number
     sql: ${TABLE}."UNIT_PRICE"
+
   - name: tax_rate
     field_type: dimension
     type: number
     sql: ${TABLE}."TAX_RATE"
+
   - name: discount
     field_type: dimension
     type: number
     sql: ${TABLE}."DISCOUNT"
+
   - name: cost
     field_type: dimension
     type: number
     sql: ${TABLE}."COST"
+
   - name: quantity
     field_type: dimension
     type: number

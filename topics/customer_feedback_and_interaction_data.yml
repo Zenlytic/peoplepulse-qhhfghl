@@ -1,7 +1,7 @@
 type: topic
-label: Customer Feedback and Interaction Data
 base_view: nps_survey
 model_name: peoplepulse_model
+label: Customer Feedback and Interaction Data
 description: >-
   This data model integrates customer feedback from NPS surveys, customer
   details, event interactions with the product, and account information. The NPS

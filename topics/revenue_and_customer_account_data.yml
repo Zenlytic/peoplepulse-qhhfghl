@@ -1,7 +1,7 @@
 type: topic
-label: Revenue and Customer Account Data
 base_view: people_pulse_mrr
 model_name: peoplepulse_model
+label: Revenue and Customer Account Data
 description: >-
   This data model captures key information about revenue and customer accounts.
   The `people_pulse_mrr` view focuses on metrics related to Monthly Recurring

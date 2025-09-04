@@ -1,7 +1,7 @@
 type: topic
-label: Product Usage Data Model
 base_view: events
 model_name: peoplepulse_model
+label: Product Usage Data Model
 description: >-
   This data model captures detailed information about product interactions and
   user demographics. The 'events' view tracks individual user actions on the

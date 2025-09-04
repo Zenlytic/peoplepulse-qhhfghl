@@ -1,7 +1,7 @@
 type: topic
-label: Product Information
 base_view: product
 model_name: peoplepulse_model
+label: Product Information
 description: >-
   The 'Product Information' view provides details about individual products. It
   includes a unique identifier for each product (PRODUCT_ID), the type of

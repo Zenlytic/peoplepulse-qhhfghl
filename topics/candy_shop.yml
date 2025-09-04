@@ -1,6 +1,6 @@
-base_view: stars_type9
+base_view: candy_shop_suppliers
 model_name: zenlytic_managed
-label: Stars Type9
+label: Candy Shop
 description: ''
 views: {}
 type: topic
