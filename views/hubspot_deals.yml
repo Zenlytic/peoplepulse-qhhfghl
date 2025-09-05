@@ -1,5 +1,5 @@
-name: hubspot_deals
 type: view
+name: hubspot_deals
 model_name: zenlytic_managed
 sql_table_name: hubspot_deals
 default_date: First Meeting Date
@@ -9,41 +9,49 @@ fields:
     type: number
     sql: ${TABLE}."RECORD_ID"
     searchable: true
+
   - name: Deal_Name
     field_type: dimension
     type: string
     sql: ${TABLE}."DEAL_NAME"
     searchable: true
+
   - name: Deal_Stage
     field_type: dimension
     type: string
     sql: ${TABLE}."DEAL_STAGE"
     searchable: true
+
   - name: Deal_owner
     field_type: dimension
     type: string
     sql: ${TABLE}."DEAL_OWNER"
     searchable: true
+
   - name: Amount
     field_type: dimension
     type: number
     sql: ${TABLE}."AMOUNT"
     searchable: true
+
   - name: Pipeline_Source
     field_type: dimension
     type: string
     sql: ${TABLE}."PIPELINE_SOURCE"
     searchable: true
+
   - name: Closed_Lost_Reason
     field_type: dimension
     type: string
     sql: ${TABLE}."CLOSED_LOST_REASON"
     searchable: true
+
   - name: Is_Closed_Won
     field_type: dimension
     type: yesno
     sql: ${TABLE}."IS_CLOSED_WON"
     searchable: true
+
   - name: First_Meeting_Date
     field_type: dimension_group
     type: time
@@ -57,16 +65,19 @@ fields:
       - day_of_year
       - week_of_year
       - month_of_year
+
   - name: Close_Date
     field_type: dimension_group
     type: time
     sql: ${TABLE}."CLOSE_DATE"
     timeframes: *ref_0
+
   - name: Create_Date
     field_type: dimension_group
     type: time
     sql: ${TABLE}."CREATE_DATE"
     timeframes: *ref_0
+
   - name: Last_Activity_Date
     field_type: dimension_group
     type: time

@@ -13,10 +13,12 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."SALES_REP_ID"
+
   - name: daily_quota
     field_type: dimension
     type: number
     sql: ${TABLE}."DAILY_QUOTA"
+
   - name: date
     field_type: dimension_group
     type: time
@@ -35,12 +37,14 @@ fields:
       - fiscal_year
       - year
     sql: ${TABLE}."DATE"
+
   - name: total_daily_quota
     field_type: measure
     type: sum
     description: The sum of daily quotas for all sales representatives.
     sql: ${daily_quota}
     value_format_name: usd
+
   - name: quota_attainment
     field_type: measure
     type: number

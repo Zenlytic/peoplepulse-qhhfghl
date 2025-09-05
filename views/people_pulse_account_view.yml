@@ -15,45 +15,54 @@ fields:
     hidden: true
     primary_key: true
     sql: ${TABLE}."ACCOUNT_ID"
+
   - name: annual_revenue
     field_type: dimension
     type: number
     hidden: true
     sql: ${TABLE}."ANNUAL_REVENUE"
+
   - name: contact_email
     field_type: dimension
     type: string
     sql: ${TABLE}."CONTACT_EMAIL"
     searchable: false
+
   - name: account_name
     field_type: dimension
     type: string
     sql: ${TABLE}."ACCOUNT_NAME"
     searchable: true
+
   - name: location
     field_type: dimension
     type: string
     sql: ${TABLE}."LOCATION"
     searchable: true
+
   - name: size
     field_type: dimension
     type: number
     sql: ${TABLE}."SIZE"
+
   - name: contact_name
     field_type: dimension
     type: string
     sql: ${TABLE}."CONTACT_NAME"
     searchable: true
+
   - name: churned
     field_type: dimension
     type: string
     sql: ${TABLE}."CHURNED"
     searchable: true
+
   - name: industry
     field_type: dimension
     type: string
     sql: ${TABLE}."INDUSTRY"
     searchable: true
+
   - name: renewal_date
     field_type: dimension_group
     type: time
@@ -69,6 +78,7 @@ fields:
       - quarter
       - year
     sql: ${TABLE}."CONTRACT_END_DATE"
+
   - name: contract_start_date
     field_type: dimension_group
     type: time
@@ -84,16 +94,19 @@ fields:
       - quarter
       - year
     sql: ${TABLE}."CONTRACT_START_DATE"
+
   - name: average_account_size
     field_type: measure
     type: average
     description: The average size of accounts
     sql: ${size}
+
   - name: number_of_churned_accounts
     field_type: measure
     type: count
     description: The count of accounts that have churned
     sql: CASE WHEN ${churned} = 'Yes' THEN 1 ELSE NULL END
+
   - name: number_of_accounts
     field_type: measure
     type: count_distinct

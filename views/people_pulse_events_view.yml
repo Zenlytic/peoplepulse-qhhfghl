@@ -23,36 +23,43 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."USER_ID"
+
   - name: event_id
     field_type: dimension
     type: number
     sql: ${TABLE}."EVENT_ID"
     hidden: true
     primary_key: true
+
   - name: customer_id
     field_type: dimension
     type: number
     sql: ${TABLE}."CUSTOMER_ID"
+
   - name: browser
     field_type: dimension
     type: string
     sql: ${TABLE}."BROWSER"
     searchable: true
+
   - name: event_type
     field_type: dimension
     type: string
     sql: ${TABLE}."EVENT_TYPE"
     searchable: true
+
   - name: os
     field_type: dimension
     type: string
     sql: ${TABLE}."OS"
     searchable: true
+
   - name: device_type
     field_type: dimension
     type: string
     sql: ${TABLE}."DEVICE_TYPE"
     searchable: true
+
   - name: event_time
     field_type: dimension_group
     type: time
@@ -72,12 +79,14 @@ fields:
       - fiscal_year
       - year
     sql: ${TABLE}."EVENT_TIME"
+
   - name: total_events
     field_type: measure
     type: count
     description: The total number of events recorded
     sql: ${event_id}
     value_format_name: decimal_0
+
   - name: unique_customers
     field_type: measure
     type: count_distinct

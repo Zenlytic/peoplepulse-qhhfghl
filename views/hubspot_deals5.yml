@@ -1,7 +1,7 @@
 type: view
-name: hubspot_deals4
+name: hubspot_deals5
 model_name: zenlytic_managed
-sql_table_name: hubspot_deals4
+sql_table_name: hubspot_deals5
 default_date: First Meeting Date
 fields:
   - name: Record_ID
