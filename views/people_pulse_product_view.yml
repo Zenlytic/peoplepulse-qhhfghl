@@ -13,13 +13,11 @@ fields:
     type: string
     sql: ${TABLE}."PRODUCT_ID"
     searchable: true
-
   - name: product_type
     field_type: dimension
     type: string
     sql: ${TABLE}."PRODUCT_TYPE"
     searchable: true
-
   - name: product_name
     field_type: dimension
     type: string

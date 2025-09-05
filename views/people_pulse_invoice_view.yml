@@ -16,18 +16,15 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."ACCOUNT_ID"
-
   - name: invoice_id
     field_type: dimension
     type: number
     sql: ${TABLE}."INVOICE_ID"
-
   - name: cadence
     field_type: dimension
     type: string
     sql: ${TABLE}."CADENCE"
     searchable: true
-
   - name: invoice_date
     field_type: dimension_group
     type: time
@@ -47,14 +44,12 @@ fields:
       - fiscal_year
       - year
     sql: ${TABLE}."INVOICE_DATE"
-
   - name: total_invoices
     field_type: measure
     type: count
     description: The total number of invoices.
     value_format_name: decimal_0
     sql: ${invoice_id}
-
   - name: total_accounts
     field_type: measure
     type: count_distinct

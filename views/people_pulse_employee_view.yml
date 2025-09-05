@@ -12,20 +12,17 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."EMPLOYEE_ID"
-
   - name: employee_name
     field_type: dimension
     type: string
     sql: ${TABLE}."NAME"
     searchable: false
-
   - name: salary
     field_type: dimension
     type: number
     required_access_grants:
       - exec_only
     sql: ${TABLE}."SALARY"
-
   - name: role
     field_type: dimension
     type: string

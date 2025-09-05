@@ -17,23 +17,19 @@ fields:
     hidden: true
     primary_key: true
     sql: ${TABLE}."ID"
-
   - name: customer_id
     field_type: dimension
     type: number
     sql: ${TABLE}."CUSTOMER_ID"
-
   - name: feedback
     field_type: dimension
     type: string
     sql: ${TABLE}."FEEDBACK"
     searchable: true
-
   - name: survey_score
     field_type: dimension
     type: number
     sql: ${TABLE}."SURVEY_SCORE"
-
   - name: survey_date
     field_type: dimension_group
     type: time
@@ -49,12 +45,10 @@ fields:
       - quarter
       - year
     sql: CURRENT_DATE
-
   - name: average_nps_survey_score
     field_type: measure
     type: average
     sql: ${survey_score}
-
   - name: count_nps_survey_quizes
     field_type: measure
     type: count

@@ -1,0 +1,6 @@
+base_view: hubspot_deals
+description: ''
+label: Hubspot Deals
+model_name: zenlytic_managed
+views: {}
+type: topic

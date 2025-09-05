@@ -13,31 +13,26 @@ fields:
     field_type: dimension
     type: number
     sql: ${TABLE}."SALES_REP_ID"
-
   - name: name
     field_type: dimension
     type: string
     label: Name
     sql: ${TABLE}."NAME"
     searchable: true
-
   - name: quota
     field_type: dimension
     type: number
     sql: ${TABLE}."QUOTA"
-
   - name: email
     field_type: dimension
     type: string
     sql: ${TABLE}."EMAIL"
     searchable: true
-
   - name: region
     field_type: dimension
     type: string
     sql: ${TABLE}."REGION"
     searchable: true
-
   - name: hire_date
     field_type: dimension_group
     type: time
@@ -53,14 +48,12 @@ fields:
       - quarter
       - year
     sql: ${TABLE}."HIRE_DATE"
-
   - name: average_quota
     field_type: measure
     type: average
     description: The average quota assigned to sales representatives.
     value_format_name: usd
     sql: ${quota}
-
   - name: count_sales_reps
     field_type: measure
     type: count
