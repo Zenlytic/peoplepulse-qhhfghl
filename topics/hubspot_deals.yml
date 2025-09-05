@@ -1,4 +1,4 @@
-base_view: hubspot_deals
+base_view: hubspot_deals4
 description: ''
 label: Hubspot Deals
 model_name: zenlytic_managed
