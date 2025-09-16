@@ -1,23 +1,26 @@
 type: topic
-label: Customer Account and Invoicing Summary
 base_view: invoice
 model_name: peoplepulse_model
-description: This data model focuses on the relationship between customer accounts
-  and their invoicing details. The `invoice` view provides insights into billing frequency,
-  dates, and aggregated invoice counts per account. Key fields include `ACCOUNT_ID`,
-  indicating the unique account identifier, `INVOICE_ID` for tracking individual invoices,
-  `CADENCE` for billing cycle information, and totals for invoices and accounts. The
-  `account` view offers details on customer profiles, including contact information,
-  account status, and industry. Fields like `CONTACT_EMAIL`, `ACCOUNT_NAME`, `LOCATION`,
-  `SIZE`, and `INDUSTRY` provide demographics, while `CHURNED`, `RENEWAL_DATE_NONE`,
-  and `CONTRACT_START_DATE_NONE` offer status and timeline details. The model supports
-  understanding customer churn and average account size.
-zoe_description: This model aggregates data about customer accounts and invoicing.
-  Access the `invoice` view for billing details by `ACCOUNT_ID`, `INVOICE_DATE_NONE`,
-  and summary totals. Consult the `account` view for customer demographics and contract
-  timelines. Use `ACCOUNT_NAME`, `CHURNED`, and other fields to analyze churn patterns
-  and account profiles. Associate billing and customer details to enhance insights
-  into account activity.
+label: Customer Account and Invoicing Summary
+description: >-
+  This data model focuses on the relationship between customer accounts and
+  their invoicing details. The `invoice` view provides insights into billing
+  frequency, dates, and aggregated invoice counts per account. Key fields
+  include `ACCOUNT_ID`, indicating the unique account identifier, `INVOICE_ID`
+  for tracking individual invoices, `CADENCE` for billing cycle information, and
+  totals for invoices and accounts. The `account` view offers details on
+  customer profiles, including contact information, account status, and
+  industry. Fields like `CONTACT_EMAIL`, `ACCOUNT_NAME`, `LOCATION`, `SIZE`, and
+  `INDUSTRY` provide demographics, while `CHURNED`, `RENEWAL_DATE_NONE`, and
+  `CONTRACT_START_DATE_NONE` offer status and timeline details. The model
+  supports understanding customer churn and average account size.
+zoe_description: >-
+  This model aggregates data about customer accounts and invoicing. Access the
+  `invoice` view for billing details by `ACCOUNT_ID`, `INVOICE_DATE_NONE`, and
+  summary totals. Consult the `account` view for customer demographics and
+  contract timelines. Use `ACCOUNT_NAME`, `CHURNED`, and other fields to analyze
+  churn patterns and account profiles. Associate billing and customer details to
+  enhance insights into account activity.
 hidden: false
 views:
   account:
