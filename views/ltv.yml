@@ -1,0 +1,41 @@
+type: view
+name: ltv
+model_name: peoplepulse_model
+sql_table_name: DEMO_PROD.LTV
+fields:
+  - name: CUSTOMER_ID
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."CUSTOMER_ID"
+    searchable: true
+    primary_key: true
+
+  - name: DATE_MONTH
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."DATE_MONTH"
+    searchable: true
+
+  - name: N_CUSTOMERS_IN_MONTH
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."N_CUSTOMERS_IN_MONTH"
+    searchable: true
+
+  - name: N_ORDERS_IN_MONTH
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."N_ORDERS_IN_MONTH"
+    searchable: true
+
+  - name: N_CUMULATIVE_ORDERS
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."N_CUMULATIVE_ORDERS"
+    searchable: true
+
+  - name: GROSS_SALES
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."GROSS_SALES"
+    searchable: true

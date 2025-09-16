@@ -1,0 +1,6 @@
+base_view: ltv
+model_name: peoplepulse_model
+label: Ltv
+description: ''
+views: {}
+type: topic
