@@ -3,6 +3,5 @@ label: Customer and Account Data
 base_view: Customer
 model_name: peoplepulse_model
 description: ''
-hidden: false
 views: {}
 
