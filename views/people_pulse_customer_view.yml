@@ -1,6 +1,6 @@
 version: 1
 type: view
-name: customer
+name: Customer
 description: These are the users/customers (humans) who use the product, not the companies
   who pay for it (that is accounts)
 model_name: peoplepulse_model
