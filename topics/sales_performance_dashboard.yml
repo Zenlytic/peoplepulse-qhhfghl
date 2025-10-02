@@ -1,19 +1,22 @@
 type: topic
-label: Sales Performance Dashboard
 base_view: people_pulse_plan
 model_name: peoplepulse_model
-description: "The Sales Performance Dashboard provides insights into the quota attainment\
-  \ of sales representatives on a daily basis. It integrates data from the 'people_pulse_plan'\
-  \ to track each representative\u2019s progress towards their daily quota and the\
-  \ 'sales_rep' view to provide contextual details about the sales representatives,\
-  \ including their personal information, regional assignment, and overall performance\
-  \ metrics. Key fields include the sales representative's ID, name, email, assigned\
-  \ region, quota metrics, hire date, and their daily quota attainment."
-zoe_description: The Sales Performance Dashboard integrates daily quota attainment
-  data with sales representative details. Leverage the 'people_pulse_plan' to monitor
-  daily progress towards quotas, and use 'sales_rep' for contextual information including
-  names, emails, regions, and overall performance metrics. Focus on SALES_REP_ID to
-  track individual performance across both views.
+label: Sales Performance Dashboard
+description: >-
+  The Sales Performance Dashboard provides insights into the quota attainment of
+  sales representatives on a daily basis. It integrates data from the
+  'people_pulse_plan' to track each representative’s progress towards their
+  daily quota and the 'sales_rep' view to provide contextual details about the
+  sales representatives, including their personal information, regional
+  assignment, and overall performance metrics. Key fields include the sales
+  representative's ID, name, email, assigned region, quota metrics, hire date,
+  and their daily quota attainment.
+zoe_description: >-
+  The Sales Performance Dashboard integrates daily quota attainment data with
+  sales representative details. Leverage the 'people_pulse_plan' to monitor
+  daily progress towards quotas, and use 'sales_rep' for contextual information
+  including names, emails, regions, and overall performance metrics. Focus on
+  SALES_REP_ID to track individual performance across both views.
 hidden: false
 views:
   sales_rep:

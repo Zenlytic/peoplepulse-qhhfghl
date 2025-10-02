@@ -1,21 +1,23 @@
 type: topic
-label: Revenue and Customer Account Data
 base_view: people_pulse_mrr
 model_name: peoplepulse_model
-description: This data model captures key information about revenue and customer accounts.
-  The `people_pulse_mrr` view focuses on metrics related to Monthly Recurring Revenue
-  (MRR), tracking the types of subscription plans, customer segments, and financial
-  details like total MRR and ARR (Annual Recurring Revenue) over specific periods.
-  The `account` view provides insights into customer accounts, detailing contact information,
-  geographical location, account size, industry, and account lifecycle events such
-  as churn and contracts. These combined views enable analysis of revenue streams
-  and customer account management.
-zoe_description: 'This dataset involves two key components: `people_pulse_mrr` and
-  `account`. The `people_pulse_mrr` component tracks revenue metrics like Monthly
-  Recurring Revenue (MRR) based on customer segments and plans, while the `account`
-  component monitors customer account details, including contact info, churn events,
-  contract dates, and industry classifications. Together, these help analyze financial
-  performance and customer behaviors.'
+label: Revenue and Customer Account Data
+description: >-
+  This data model captures key information about revenue and customer accounts.
+  The `people_pulse_mrr` view focuses on metrics related to Monthly Recurring
+  Revenue (MRR), tracking the types of subscription plans, customer segments,
+  and financial details like total MRR and ARR (Annual Recurring Revenue) over
+  specific periods. The `account` view provides insights into customer accounts,
+  detailing contact information, geographical location, account size, industry,
+  and account lifecycle events such as churn and contracts. These combined views
+  enable analysis of revenue streams and customer account management.
+zoe_description: >-
+  This dataset involves two key components: `people_pulse_mrr` and `account`.
+  The `people_pulse_mrr` component tracks revenue metrics like Monthly Recurring
+  Revenue (MRR) based on customer segments and plans, while the `account`
+  component monitors customer account details, including contact info, churn
+  events, contract dates, and industry classifications. Together, these help
+  analyze financial performance and customer behaviors.
 hidden: false
 views:
   account:
