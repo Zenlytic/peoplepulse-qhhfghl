@@ -1,19 +1,21 @@
 type: topic
-label: Account Information Summary
 base_view: account
 model_name: peoplepulse_model
-description: The Account Information Summary provides a comprehensive view of various
-  accounts, capturing essential details such as contact information, location, industry
-  type, and account size. This view includes the account's contact email, name, location,
-  and the name of the contact person. It indicates if an account has churned and details
-  the industry it belongs to. Critical dates such as the renewal and contract start
-  dates are also captured. Additionally, the view includes average size metrics, and
-  the numbers of churned and total accounts, allowing for in-depth analysis of account
-  performance and retention.
-zoe_description: The Account Information Summary view provides detailed metrics and
-  attributes for accounts, including contact details, location, industry classification,
-  and size. It indicates churn status and includes renewal and contract start dates.
-  Utilize account size averages and churned versus total account numbers for performance
-  and retention assessments.
+label: Account Information Summary
+description: >-
+  The Account Information Summary provides a comprehensive view of various
+  accounts, capturing essential details such as contact information, location,
+  industry type, and account size. This view includes the account's contact
+  email, name, location, and the name of the contact person. It indicates if an
+  account has churned and details the industry it belongs to. Critical dates
+  such as the renewal and contract start dates are also captured. Additionally,
+  the view includes average size metrics, and the numbers of churned and total
+  accounts, allowing for in-depth analysis of account performance and retention.
+zoe_description: >-
+  The Account Information Summary view provides detailed metrics and attributes
+  for accounts, including contact details, location, industry classification,
+  and size. It indicates churn status and includes renewal and contract start
+  dates. Utilize account size averages and churned versus total account numbers
+  for performance and retention assessments.
 hidden: false
 views: {}
