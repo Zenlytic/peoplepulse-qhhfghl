@@ -46,7 +46,7 @@ relationships:
     sql_on: ${candy_shop_order_items.product_id}=${candy_shop_products.product_id}
   - from_table: candy_shop_products
     join_table: candy_shop_suppliers
-    join_type: left_outer
+    join_type: inner
     relationship: many_to_one
     sql_on: ${candy_shop_products.supplier_id}=${candy_shop_suppliers.supplier_id}
   - from_table: candy_shop_orders
