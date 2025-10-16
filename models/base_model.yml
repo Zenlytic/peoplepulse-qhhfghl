@@ -27,5 +27,5 @@ relationships:
   - from_table: candy_shop_products
     join_table: candy_shop_suppliers
     join_type: left_outer
-    relationship: many_to_one
+    relationship: one_to_many
     sql_on: ${candy_shop_products.supplier_id}=${candy_shop_suppliers.supplier_id}
