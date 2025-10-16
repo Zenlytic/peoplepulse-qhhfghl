@@ -108,3 +108,9 @@ fields:
     type: time
     sql: ${TABLE}."BIRTHDAY"
     timeframes: *ref_0
+views:
+  candy_shop_orders:
+    join:
+      join_type: left_outer
+      relationship: one_to_many
+      sql_on: ${candy_shop_customers.customer_id}=${candy_shop_orders.customer_id}
