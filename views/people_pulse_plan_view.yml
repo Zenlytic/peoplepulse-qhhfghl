@@ -14,7 +14,7 @@ fields:
   type: number
   sql: ${TABLE}."SALES_REP_ID"
 
-- name: daily_quota
+- name: daily_quotaa
   field_type: dimension
   type: number
   sql: ${TABLE}."DAILY_QUOTA"
@@ -42,7 +42,7 @@ fields:
   field_type: measure
   type: sum
   description: The sum of daily quotas for all sales representatives.
-  sql: ${daily_quota}
+  sql: ${daily_quotaa}
   value_format_name: usd
 
 - name: quota_attainment
