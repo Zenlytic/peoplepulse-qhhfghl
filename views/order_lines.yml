@@ -1,0 +1,128 @@
+type: view
+name: order_lines
+model_name: peoplepulse_model
+sql_table_name: DEMO_PROD.ORDER_LINES
+default_date: ORDER_AT
+fields:
+  - name: ORDER_LINE_ID
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."ORDER_LINE_ID"
+    searchable: true
+    primary_key: true
+
+  - name: ORDER_ID
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."ORDER_ID"
+    searchable: true
+
+  - name: CUSTOMER_ID
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."CUSTOMER_ID"
+    searchable: true
+
+  - name: PRODUCT_ID
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."PRODUCT_ID"
+    searchable: true
+
+  - name: SUBSCRIPTION_VS_OTP
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."SUBSCRIPTION_VS_OTP"
+    searchable: true
+
+  - name: MARKETING_CHANNEL
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."MARKETING_CHANNEL"
+    searchable: true
+
+  - name: MARKETING_SOURCE
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."MARKETING_SOURCE"
+    searchable: true
+
+  - name: COGS
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."COGS"
+    searchable: true
+
+  - name: FIRST_CLICK
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."FIRST_CLICK"
+    searchable: true
+
+  - name: LAST_CLICK
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."LAST_CLICK"
+    searchable: true
+
+  - name: CAMPAIGN
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."CAMPAIGN"
+    searchable: true
+
+  - name: PROMOTION
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."PROMOTION"
+    searchable: true
+
+  - name: PRICE
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."PRICE"
+    searchable: true
+
+  - name: QUANTITY
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."QUANTITY"
+    searchable: true
+
+  - name: DISCOUNT
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."DISCOUNT"
+    searchable: true
+
+  - name: REVENUE
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."REVENUE"
+    searchable: true
+
+  - name: ORDER_NUMBER
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."ORDER_NUMBER"
+    searchable: true
+
+  - name: NEW_VS_REPEAT
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."NEW_VS_REPEAT"
+    searchable: true
+
+  - name: ORDER_AT
+    field_type: dimension_group
+    type: time
+    sql: ${TABLE}."ORDER_AT"
+    timeframes:
+      - date
+      - week
+      - month
+      - quarter
+      - year
+      - day_of_year
+      - week_of_year
+      - month_of_year

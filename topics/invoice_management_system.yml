@@ -1,21 +1,25 @@
 type: topic
-label: Invoice Management System
 base_view: invoice_item
 model_name: peoplepulse_model
-description: This data model provides a comprehensive view of an Invoice Management
-  System, capturing essential details on transactions and related entities. The 'invoice_item'
-  view links products to invoices, detailing the pricing, tax, discount, and quantity
-  of each item. The 'invoice' view consolidates details about each invoice, identifying
-  the associated account and summarizing billing specifics such as cadence and total
-  amounts. The 'product' view offers details about each product involved in transactions,
-  while the 'account' view provides information on customer accounts, including contact
-  details, account status, and historical data. Together, these views enable effective
-  management and analysis of transactions, revenues, and customer relationships.
-zoe_description: The Invoice Management System data captures interactions between
-  invoices, products, and accounts. 'invoice_item' records transaction details per
-  product. 'invoice' provides overarching transaction summaries. 'product' details
-  product information, and 'account' offers customer account insights. Utilize this
-  model to analyze sales, customer engagement, and financial performance.
+label: Invoice Management System
+description: >-
+  This data model provides a comprehensive view of an Invoice Management System,
+  capturing essential details on transactions and related entities. The
+  'invoice_item' view links products to invoices, detailing the pricing, tax,
+  discount, and quantity of each item. The 'invoice' view consolidates details
+  about each invoice, identifying the associated account and summarizing billing
+  specifics such as cadence and total amounts. The 'product' view offers details
+  about each product involved in transactions, while the 'account' view provides
+  information on customer accounts, including contact details, account status,
+  and historical data. Together, these views enable effective management and
+  analysis of transactions, revenues, and customer relationships.
+zoe_description: >-
+  The Invoice Management System data captures interactions between invoices,
+  products, and accounts. 'invoice_item' records transaction details per
+  product. 'invoice' provides overarching transaction summaries. 'product'
+  details product information, and 'account' offers customer account insights.
+  Utilize this model to analyze sales, customer engagement, and financial
+  performance.
 hidden: false
 views:
   invoice:

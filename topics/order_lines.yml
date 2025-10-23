@@ -1,0 +1,7 @@
+base_view: order_lines
+name: order_lines
+model_name: peoplepulse_model
+label: Order Lines
+description: ''
+views: {}
+type: topic
