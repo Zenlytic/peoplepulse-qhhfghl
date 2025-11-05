@@ -112,4 +112,4 @@ fields:
     type: count_distinct
     description: The total number of unique accounts
     sql: ${account_id}
-label: Account_NJM
+label: Account
