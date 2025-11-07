@@ -2,7 +2,7 @@ type: view
 name: zenlytic_table_2025_10_23t185836_561
 model_name: zenlytic_managed
 sql_table_name: zenlytic_table_2025_10_23t185836_561
-default_date: Week Start
+# default_date: Week Start
 fields:
   - name: Total_Sales
     field_type: dimension
