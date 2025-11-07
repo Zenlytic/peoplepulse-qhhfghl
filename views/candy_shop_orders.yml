@@ -5,9 +5,12 @@ sql_table_name: candy_shop_orders
 fields:
   - name: order_id
     field_type: dimension
-    type: string
-    sql: ${TABLE}."ORDER_ID"
-    searchable: true
+    type: number
+    description: My oder id
+    label: Order Id NJM
+    primary_key: true
+    searchable: false
+    sql: '${TABLE}."ORDER_ID" --TODO: NJM'
 
   - name: customer_id
     field_type: dimension
