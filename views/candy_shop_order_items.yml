@@ -44,3 +44,4 @@ fields:
     type: string
     sql: ${TABLE}."SPECIAL_INSTRUCTIONS"
     searchable: true
+label: Order Items
