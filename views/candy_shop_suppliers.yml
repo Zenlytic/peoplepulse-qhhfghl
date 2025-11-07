@@ -86,3 +86,4 @@ fields:
     type: string
     sql: ${TABLE}."SPECIALTY"
     searchable: true
+label: Suppliers
