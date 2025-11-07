@@ -1,4 +1,4 @@
-base_view: candy_shop_orders
+base_view: candy_shop_suppliers
 name: new_topic
 model_name: zenlytic_managed
 label: New Topic
