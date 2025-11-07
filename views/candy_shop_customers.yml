@@ -106,3 +106,4 @@ fields:
     type: time
     sql: ${TABLE}."BIRTHDAY"
     timeframes: *ref_0
+label: Customers
