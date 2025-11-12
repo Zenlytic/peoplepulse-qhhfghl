@@ -49,8 +49,9 @@ fields:
   - name: contact_name
     field_type: dimension
     type: string
-    sql: ${TABLE}."CONTACT_NAME"
+    label: Contact Name
     searchable: true
+    sql: ${TABLE}."CONTACT_NAME" 8908988hhh
 
   - name: churned
     field_type: dimension
