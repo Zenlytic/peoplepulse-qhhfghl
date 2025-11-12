@@ -14,7 +14,8 @@ fields:
     type: number
     hidden: true
     primary_key: true
-    sql: ${TABLE}."ACCOUNT_ID"
+    searchable: false
+    sql: ${TABLE}."ACCOUNT_ID" 0009
 
   - name: annual_revenue
     field_type: dimension
