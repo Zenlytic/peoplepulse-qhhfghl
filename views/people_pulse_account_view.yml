@@ -51,7 +51,7 @@ fields:
     type: string
     label: Contact Name NJM
     searchable: true
-    sql: ${TABLE}."CONTACT_NAME" 8908988hhh
+    sql: ${TABLE}."CONTACT_NAME"
 
   - name: churned
     field_type: dimension
