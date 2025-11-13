@@ -49,7 +49,7 @@ fields:
   - name: contact_name
     field_type: dimension
     type: string
-    label: Contact Name
+    label: Contact Name NJM
     searchable: true
     sql: ${TABLE}."CONTACT_NAME" 8908988hhh
 
