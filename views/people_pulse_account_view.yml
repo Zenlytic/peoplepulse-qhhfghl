@@ -111,6 +111,6 @@ fields:
     field_type: measure
     type: count_distinct
     description: The total number of unique accounts
-    hidden: true
+    hidden: false
     sql: ${account_id}
     value_format_name: decimal_0
