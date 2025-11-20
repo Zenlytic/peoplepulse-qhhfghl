@@ -1,56 +1,58 @@
 version: 1
 type: view
 name: customer
-description: These are the users/customers (humans) who use the product, not the companies
+description: >-
+  These are the users/customers (humans) who use the product, not the companies
   who pay for it (that is accounts)
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER
 default_date: account.contract_start_date
 identifiers:
-- name: account_id
-  type: foreign
-  sql: ${account_id}
-- name: customer_id
-  type: primary
-  sql: ${customer_id}
+  - name: account_id
+    type: foreign
+    sql: ${account_id}
+  - name: customer_id
+    type: primary
+    sql: ${customer_id}
 fields:
-- name: account_id
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."ACCOUNT_ID"
+  - name: account_id
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."ACCOUNT_ID"
 
-- name: customer_id
-  field_type: dimension
-  type: number
-  sql: ${TABLE}."CUSTOMER_ID"
+  - name: customer_id
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."CUSTOMER_ID"
 
-- name: phone
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."PHONE"
-  searchable: false
+  - name: phone
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."PHONE"
+    searchable: false
 
-- name: customer_name
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."CUSTOMER_NAME"
-  searchable: false
+  - name: customer_name
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."CUSTOMER_NAME"
+    searchable: false
 
-- name: address
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."ADDRESS"
-  searchable: false
+  - name: address
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."ADDRESS"
+    searchable: false
 
-- name: email
-  field_type: dimension
-  type: string
-  sql: ${TABLE}."EMAIL"
-  searchable: false
+  - name: email
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."EMAIL"
+    searchable: false
 
-- name: number_of_customers
-  field_type: measure
-  type: count
-  description: This is the number of customers/users who are using the product, not
-    the unique accounts paying us
-  sql: ${TABLE}.customer_id
+  - name: number_of_customers
+    field_type: measure
+    type: count
+    description: >-
+      This is the number of customers/users who are using the product, not the
+      unique accounts paying us
+    sql: ${TABLE}.customer_id

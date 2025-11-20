@@ -1,16 +1,27 @@
 type: topic
-label: Employee Information
 base_view: employee
 model_name: peoplepulse_model
-description: "The 'Employee Information' dataset contains essential details about\
-  \ employees within an organization. Each record is structured to include the following\
-  \ fields: \n\n- EMPLOYEE_ID: A unique identifier for each employee.\n- EMPLOYEE_NAME:\
-  \ The full name of the employee.\n- SALARY: The employee's compensation package\
-  \ stated in monetary terms.\n- ROLE: The position or job title the employee holds\
-  \ within the organization.\n\nThis dataset is typically used for HR management,\
-  \ payroll processing, and analysis of workforce distribution."
-zoe_description: This dataset provides key information about each employee, including
-  their unique ID, name, salary, and role. Use it to understand staff details, manage
+label: Employee Information
+description: >-
+  The 'Employee Information' dataset contains essential details about employees
+  within an organization. Each record is structured to include the following
+  fields: 
+
+
+  - EMPLOYEE_ID: A unique identifier for each employee.
+
+  - EMPLOYEE_NAME: The full name of the employee.
+
+  - SALARY: The employee's compensation package stated in monetary terms.
+
+  - ROLE: The position or job title the employee holds within the organization.
+
+
+  This dataset is typically used for HR management, payroll processing, and
+  analysis of workforce distribution.
+zoe_description: >-
+  This dataset provides key information about each employee, including their
+  unique ID, name, salary, and role. Use it to understand staff details, manage
   payroll, or analyze workforce roles within the organization.
 hidden: false
 views: {}
