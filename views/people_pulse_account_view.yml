@@ -101,7 +101,7 @@ fields:
     description: The average size of accounts
     sql: ${size}
 
-  - name: number_of_churned_accountsa
+  - name: number_of_churned_accounts
     field_type: measure
     type: count
     description: The count of accounts that have churned
