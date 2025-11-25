@@ -122,3 +122,10 @@ fields:
     type: average
     description: The average number of page views per session
     sql: ${page_views}
+
+  - name: my_new_measure
+    field_type: measure
+    type: sum
+    primary_key: false
+    sql: 'TODO: NJM'
+    value_format_name: decimal_0
