@@ -1,0 +1,7 @@
+base_view: candy_shop_customers
+name: candy_shop_customers
+model_name: zenlytic_managed
+label: Candy Shop Customers
+description: ''
+views: {}
+type: topic
