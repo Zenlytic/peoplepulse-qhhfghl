@@ -19,8 +19,7 @@ zoe_description: >-
   `invoice` view for billing details by `ACCOUNT_ID`, `INVOICE_DATE_NONE`, and
   summary totals. Consult the `account` view for customer demographics and
   contract timelines. Use `ACCOUNT_NAME`, `CHURNED`, and other fields to analyze
-  churn patterns and account profiles. Associate billing and customer details to
-  enhance insights into account activity.
+  churn patterns and account profiles. 
 hidden: false
 views:
   account:
