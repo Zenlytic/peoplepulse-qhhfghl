@@ -19,8 +19,7 @@ zoe_description: >-
   Leverage the associated sales_rep view for personnel details and the product
   view for product information. Use definitions: Lead refers to 'MQL', 'Demo'
   and Opportunity encompasses 'Qualified Opportunity', 'Pilot', 'Decision &
-  Compliance'. Extract patterns/trends in sales performance and optimize
-  strategies based on these insights.
+  Compliance'.
 hidden: false
 views:
   sales_rep:
