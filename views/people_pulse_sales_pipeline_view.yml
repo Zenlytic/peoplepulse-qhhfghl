@@ -157,10 +157,9 @@ fields:
     field_type: measure
     type: count
     description: The number of opportunities that have been lost (closed and unsuccessful).
-    sql: ${opportunity}
-    filters:
-      - field: stage
-        value: Closed Lost
+    canon_date: sales_pipeline.expected_close_date
+    primary_key: false
+    sql: case when ${stage}='Closed Lost' then ${opportunity} end
     value_format_name: decimal_0
 
   - name: average_probability_to_close
