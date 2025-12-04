@@ -117,6 +117,7 @@ fields:
     type: average
     description: The average size of deals across all opportunities.
     canon_date: sales_pipeline.expected_close_date
+    label: Average Deal Size 2
     primary_key: false
     sql: ${deal_size}
     value_format_name: usd
