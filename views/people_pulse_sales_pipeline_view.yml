@@ -108,6 +108,7 @@ fields:
     type: sum
     description: The sum of the deal sizes for all opportunities.
     canon_date: sales_pipeline.expected_close_date
+    label: Total Deal Size 2
     primary_key: false
     sql: ${deal_size}
     value_format_name: usd
