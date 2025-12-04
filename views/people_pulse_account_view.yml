@@ -60,8 +60,9 @@ fields:
   - name: industry
     field_type: dimension
     type: string
-    sql: ${TABLE}."INDUSTRY"
+    description: jkljklj
     searchable: true
+    sql: ${TABLE}."INDUSTRY"
 
   - name: renewal_date
     field_type: dimension_group
