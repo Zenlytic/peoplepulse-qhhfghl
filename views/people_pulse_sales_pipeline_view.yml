@@ -137,10 +137,9 @@ fields:
     field_type: measure
     type: sum
     description: The total dollars for deals that have been won (closed and successful).
-    sql: ${deal_size}
-    filters:
-      - field: stage
-        value: Closed Won
+    canon_date: sales_pipeline.expected_close_date
+    primary_key: false
+    sql: case when ${stage}='Closed Won' then ${deal_size} end
     value_format_name: usd
 
   - name: count_won_opportunities
