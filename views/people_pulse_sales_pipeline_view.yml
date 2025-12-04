@@ -82,6 +82,8 @@ fields:
   - name: deal_size
     field_type: dimension
     type: number
+    label: Deal Size 9
+    searchable: false
     sql: ${TABLE}."DEAL_SIZE" * 0.15
 
   - name: expected_close_date
