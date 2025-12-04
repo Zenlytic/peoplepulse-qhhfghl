@@ -170,6 +170,7 @@ fields:
     type: average
     description: The average probability to close across all opportunities.
     canon_date: sales_pipeline.expected_close_date
+    label: Average Probability To Close 2
     primary_key: false
     sql: ${probability_to_close}
     value_format_name: decimal_0
