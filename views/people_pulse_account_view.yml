@@ -64,7 +64,7 @@ fields:
   - name: industry
     field_type: dimension
     type: string
-    description: Industry description testing
+    description: Industry description testing 2
     searchable: true
     sql: ${TABLE}."INDUSTRY"
 
