@@ -65,7 +65,9 @@ fields:
     field_type: dimension
     type: string
     description: Industry description testing 2
-    searchable: true
+    hidden: true
+    primary_key: true
+    searchable: false
     sql: ${TABLE}."INDUSTRY"
 
   - name: renewal_date
