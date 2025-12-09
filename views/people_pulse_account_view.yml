@@ -28,8 +28,9 @@ fields:
   - name: contact_email
     field_type: dimension
     type: string
-    sql: ${TABLE}."CONTACT_EMAIL"
+    description: Contact email description
     searchable: false
+    sql: ${TABLE}."CONTACT_EMAIL"
 
   - name: account_name
     field_type: dimension
