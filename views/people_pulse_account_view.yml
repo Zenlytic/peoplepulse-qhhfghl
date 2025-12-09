@@ -72,7 +72,6 @@ fields:
     type: time
     description: Reveal date description
     datatype: timestamp
-    primary_key: false
     sql: ${TABLE}."CONTRACT_END_DATE"
     timeframes:
       - raw
