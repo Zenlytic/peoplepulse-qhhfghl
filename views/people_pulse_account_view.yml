@@ -73,7 +73,6 @@ fields:
     type: time
     description: Reveal date description testing
     datatype: timestamp
-    primary_key: false
     sql: ${TABLE}."CONTRACT_END_DATE"
     timeframes:
       - raw
@@ -118,6 +117,5 @@ fields:
     field_type: measure
     type: count_distinct
     description: The total number of unique accounts testing
-    primary_key: false
     sql: ${account_id}
     value_format_name: decimal_0
