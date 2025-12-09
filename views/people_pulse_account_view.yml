@@ -117,6 +117,5 @@ fields:
     field_type: measure
     type: count_distinct
     description: The total number of unique accounts testing testing
-    primary_key: false
     sql: ${account_id}
     value_format_name: decimal_0
