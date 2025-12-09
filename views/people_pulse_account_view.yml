@@ -19,7 +19,10 @@ fields:
   - name: annual_revenue
     field_type: dimension
     type: number
+    description: |
+      Annuel revenue description
     hidden: true
+    searchable: false
     sql: ${TABLE}."ANNUAL_REVENUE"
 
   - name: contact_email
