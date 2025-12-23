@@ -4,7 +4,7 @@ name: account
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_ACCOUNT
 default_date: contract_start_date
-description: This is the table about all of our accounts from salesforce
+description: This is the table about all of our accounts from salesforce!
 identifiers:
   - name: account_id
     type: primary
