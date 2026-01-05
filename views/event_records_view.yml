@@ -115,7 +115,14 @@ fields:
   - year
   sql: ${TABLE}."created_date"
 
-
+- name: number_of_messages
+  field_type: measure
+  type: count_distinct
+  sql: ->
+    CASE
+      WHEN event_records."record_type" IN ('user_message', 'assistant')
+      THEN event_records."id"
+    END
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
 # in your table.
