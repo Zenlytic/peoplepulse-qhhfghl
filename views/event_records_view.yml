@@ -111,7 +111,8 @@ fields:
 - name: number_of_messages
   field_type: measure
   type: count_distinct
-  sql: CASE WHEN event_records."record_type" IN ('user_message', 'assistant') THEN event_records."id" END
+  sql: CASE WHEN event_records."record_type" IN ('user_message', 'assistant') THEN
+    event_records."id" END
 # To help you get started with defining fields, we've included a quick guide which you can delete at any time.
 # The following keys are required for all fields. All the fields above have been created based on the columns
 # in your table.
@@ -153,3 +154,13 @@ fields:
 #
 # For a comprehensive list of options that can be specified for a field, or for more detailed information,
 # please visit: https://docs.zenlytic.com/docs/data_modeling/data_modeling
+
+- name: number_of_conversations_znynvqtu
+  field_type: measure
+  type: count_distinct
+  label: Number Of Conversations
+  description: The number of unique conversations, counted by distinct conversation
+    thread IDs.
+  value_format_name: decimal_0
+  sql: event_records.conversation_thread_id
+  canon_date: event_records.last_modified

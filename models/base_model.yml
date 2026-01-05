@@ -1,6 +1,4 @@
+version: 1
+type: model
 name: peoplepulse_model
 connection: internal
-type: model
-version: 1
-
-
