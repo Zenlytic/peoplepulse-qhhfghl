@@ -33,6 +33,7 @@ fields:
   field_type: dimension
   type: string
   sql: ${TABLE}."message_id"
+  description: this is the field count unique whenever you want to count the number of messages 
   searchable: false
 
 - name: entity_id
