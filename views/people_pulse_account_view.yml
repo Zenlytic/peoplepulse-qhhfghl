@@ -113,9 +113,3 @@ fields:
     type: count_distinct
     description: The total number of unique accounts
     sql: ${account_id}
-
-  - name: number_of_accounts2
-    field_type: measure
-    type: count_distinct
-    description: The total number of unique accounts
-    sql: ${account_id}
