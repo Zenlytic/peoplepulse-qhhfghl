@@ -108,7 +108,7 @@ fields:
     description: The count of accounts that have churned
     sql: CASE WHEN ${churned} = 'Yes' THEN 1 ELSE NULL END
 
-  - name: number_of_accounts
+  - name: number_of_accounts2
     field_type: measure
     type: count_distinct
     description: The total number of unique accounts
