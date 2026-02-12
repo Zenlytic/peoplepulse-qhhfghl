@@ -9,6 +9,11 @@ identifiers:
   - name: account_id
     type: primary
     sql: ${account_id}
+
+always_filter:
+  - field: account.account_id
+    value: -NULL
+
 fields:
   - name: account_id
     field_type: dimension
