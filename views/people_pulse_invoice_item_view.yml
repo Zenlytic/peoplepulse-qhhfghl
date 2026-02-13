@@ -5,45 +5,53 @@ model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_INVOICE_ITEM
 default_date: invoice.invoice_date
 identifiers:
-  - name: invoice_id
-    type: foreign
-    sql: ${invoice_id}
-  - name: product_id
-    type: foreign
-    sql: ${product_id}
+- name: invoice_id
+  type: foreign
+  sql: ${invoice_id}
+- name: product_id
+  type: foreign
+  sql: ${product_id}
 fields:
-  - name: invoice_id
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."INVOICE_ID"
+- name: invoice_id
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."INVOICE_ID"
 
-  - name: product_id
-    field_type: dimension
-    type: string
-    sql: ${TABLE}."PRODUCT_ID"
-    searchable: true
+- name: product_id
+  field_type: dimension
+  type: string
+  sql: ${TABLE}."PRODUCT_ID"
+  searchable: true
 
-  - name: unit_price
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."UNIT_PRICE"
+- name: unit_price
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."UNIT_PRICE"
 
-  - name: tax_rate
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."TAX_RATE"
+- name: tax_rate
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."TAX_RATE"
 
-  - name: discount
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."DISCOUNT"
+- name: discount
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."DISCOUNT"
 
-  - name: cost
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."COST"
+- name: cost
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."COST"
 
-  - name: quantity
-    field_type: dimension
-    type: number
-    sql: ${TABLE}."QUANTITY"
+- name: quantity
+  field_type: dimension
+  type: number
+  sql: ${TABLE}."QUANTITY"
+
+- name: bargain_hunter_rate_nbqkxsnn
+  field_type: measure
+  type: number
+  label: Bargain Hunter Rate
+  sql: COUNT(DISTINCT CASE WHEN ${invoice_item.discount} > 5 THEN ${invoice_item.invoice_id}
+    ELSE NULL END) / NULLIF(COUNT(DISTINCT ${invoice_item.invoice_id}), 0)
+  canon_date: invoice.invoice_date
