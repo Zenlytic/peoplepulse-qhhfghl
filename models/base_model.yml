@@ -1,11 +1,11 @@
+version: 1
+type: model
 name: peoplepulse_model
 connection: demo
-type: model
-version: 1
 fiscal_month_offset: 1
 access_grants:
-  - name: exec_only
-    user_attribute: My Thing
-    allowed_values:
-      - Hey
+- name: exec_only
+  user_attribute: My Thing
+  allowed_values:
+  - Hey
 
