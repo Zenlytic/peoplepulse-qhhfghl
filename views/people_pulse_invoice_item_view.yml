@@ -55,3 +55,11 @@ fields:
   sql: COUNT(DISTINCT CASE WHEN ${invoice_item.discount} > 5 THEN ${invoice_item.invoice_id}
     ELSE NULL END) / NULLIF(COUNT(DISTINCT ${invoice_item.invoice_id}), 0)
   canon_date: invoice.invoice_date
+
+- name: bargain_hunter_orders_iutzxdqv
+  field_type: measure
+  type: count_distinct
+  label: Bargain Hunter Orders
+  sql: CASE WHEN ${invoice_item.discount} > 5 THEN ${invoice_item.invoice_id} ELSE
+    NULL END
+  canon_date: invoice.invoice_date
