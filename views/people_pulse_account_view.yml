@@ -1,10 +1,10 @@
 version: 1
 type: view
 name: account
+description: This is the table about all of accounts from salesforce
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_ACCOUNT
 default_date: contract_start_date
-description: This is the table about all of accounts from salesforce
 identifiers:
   - name: account_id
     type: primary
@@ -18,12 +18,6 @@ fields:
     sql: ${TABLE}."ACCOUNT_ID"
 
   - name: annual_revenue
-    field_type: dimension
-    type: number
-    hidden: true
-    sql: ${TABLE}."ANNUAL_REVENUE"
-
-  - name: annual_revenue_dupe
     field_type: dimension
     type: number
     hidden: true
