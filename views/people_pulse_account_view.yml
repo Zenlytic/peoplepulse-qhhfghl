@@ -1,25 +1,24 @@
 version: 1
 type: view
 name: account
+description: This is the table about all of accounts from salesforce
 model_name: peoplepulse_model
 sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_ACCOUNT
 default_date: contract_start_date
-description: This is the table about all of accounts from salesforce
+always_filter:
+  - field: account.account_id
+    value: '-NULL'
 identifiers:
   - name: account_id
     type: primary
     sql: ${account_id}
-
-always_filter:
-  - field: account.account_id
-    value: -NULL
-
 fields:
   - name: account_id
     field_type: dimension
-    type: number
+    type: tier
     hidden: true
     primary_key: true
+    searchable: false
     sql: ${TABLE}."ACCOUNT_ID"
 
   - name: annual_revenue
