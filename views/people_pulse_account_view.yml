@@ -98,7 +98,7 @@ fields:
 
   - name: average_account_size
     field_type: measure
-    type: average
+    type: number
     description: The average size of accounts
     sql: ${size}
 
