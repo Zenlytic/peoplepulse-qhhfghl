@@ -22,6 +22,12 @@ fields:
     type: number
     hidden: true
     sql: ${TABLE}."ANNUAL_REVENUE"
+  
+  - name: annual_revenue_dupe
+    field_type: dimension
+    type: number
+    hidden: true
+    sql: ${TABLE}."ANNUAL_REVENUE"
 
   - name: contact_email
     field_type: dimension
