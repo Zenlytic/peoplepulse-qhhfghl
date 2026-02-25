@@ -126,7 +126,7 @@ fields:
 
   - name: weighted_deal_value
     field_type: measure
-    type: number
+    type: sum
     description: >-
       The total deal size weighted by the probability to close for each
       opportunity.
