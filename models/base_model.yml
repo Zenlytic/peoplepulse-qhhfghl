@@ -1,5 +1,5 @@
 name: peoplepulse_model
-connection: demo
+connection: my_connection
 type: model
 version: 1
 fiscal_month_offset: 1
@@ -8,4 +8,3 @@ access_grants:
     user_attribute: My Thing
     allowed_values:
       - Hey
-
