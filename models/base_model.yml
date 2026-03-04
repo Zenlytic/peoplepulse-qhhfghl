@@ -1,5 +1,5 @@
 name: peoplepulse_model
-connection: demok
+connection: demo
 type: model
 version: 1
 fiscal_month_offset: 1
