@@ -110,6 +110,6 @@ fields:
 
   - name: number_of_accounts
     field_type: measure
-    type: count_distinct
+    type: number
     description: The total number of unique accounts
-    sql: ${account_id}
+    sql: COUNT(DISTINCT ${account_id}) * 10

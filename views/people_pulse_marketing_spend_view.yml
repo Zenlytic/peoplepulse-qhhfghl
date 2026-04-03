@@ -6,6 +6,13 @@ sql_table_name: DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_MARKETING_SPEND
 default_date: date
 identifiers: []
 fields:
+  - name: marketing_spend_pk
+    field_type: dimension
+    type: string
+    primary_key: true
+    hidden: true
+    sql: ROW_NUMBER() OVER (ORDER BY ${TABLE}."DATE", ${TABLE}."CAMPAIGN")
+
   - name: engagement
     field_type: dimension
     type: number

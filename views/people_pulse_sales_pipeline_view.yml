@@ -16,6 +16,13 @@ identifiers:
     type: foreign
     sql: ${product_id}
 fields:
+  - name: pipeline_pk
+    field_type: dimension
+    type: string
+    primary_key: true
+    hidden: true
+    sql: ROW_NUMBER() OVER (ORDER BY ${TABLE}."OPPORTUNITY", ${TABLE}."SALES_REP_ID")
+
   - name: sales_rep_id
     field_type: dimension
     type: number

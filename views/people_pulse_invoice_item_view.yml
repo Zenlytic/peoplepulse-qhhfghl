@@ -12,6 +12,13 @@ identifiers:
     type: foreign
     sql: ${product_id}
 fields:
+  - name: invoice_item_pk
+    field_type: dimension
+    type: string
+    primary_key: true
+    hidden: true
+    sql: CONCAT(${TABLE}."INVOICE_ID", '_', ${TABLE}."PRODUCT_ID")
+
   - name: invoice_id
     field_type: dimension
     type: number

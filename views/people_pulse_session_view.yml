@@ -18,6 +18,7 @@ fields:
   - name: session_id
     field_type: dimension
     type: number
+    primary_key: true
     sql: ${TABLE}."SESSION_ID"
 
   - name: user_id

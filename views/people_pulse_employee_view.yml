@@ -11,6 +11,7 @@ fields:
   - name: employee_id
     field_type: dimension
     type: number
+    primary_key: true
     sql: ${TABLE}."EMPLOYEE_ID"
 
   - name: employee_name

@@ -9,6 +9,13 @@ identifiers:
     type: foreign
     sql: ${sales_rep_id}
 fields:
+  - name: plan_pk
+    field_type: dimension
+    type: string
+    primary_key: true
+    hidden: true
+    sql: CONCAT(${TABLE}."SALES_REP_ID", '_', ${TABLE}."DATE")
+
   - name: sales_rep_id
     field_type: dimension
     type: number
