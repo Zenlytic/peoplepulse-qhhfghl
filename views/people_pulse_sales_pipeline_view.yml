@@ -175,3 +175,47 @@ fields:
     type: average
     description: The average probability to close across all opportunities.
     sql: ${probability_to_close}
+
+  - name: win_rate
+    field_type: measure
+    type: number
+    description: The percentage of opportunities that were won out of all closed opportunities.
+    sql: COUNT(CASE WHEN ${stage} = 'Closed Won' THEN ${opportunity} END) / NULLIF(COUNT(CASE WHEN ${stage} IN ('Closed Won', 'Closed Lost') THEN ${opportunity} END), 0)
+    value_format_name: percent_1
+
+  - name: loss_rate
+    field_type: measure
+    type: number
+    description: The percentage of opportunities that were lost out of all closed opportunities.
+    sql: COUNT(CASE WHEN ${stage} = 'Closed Lost' THEN ${opportunity} END) / NULLIF(COUNT(CASE WHEN ${stage} IN ('Closed Won', 'Closed Lost') THEN ${opportunity} END), 0)
+    value_format_name: percent_1
+
+  - name: closed_lost_usd
+    field_type: measure
+    type: sum
+    description: The total deal value for opportunities that were lost.
+    sql: ${deal_size}
+    filters:
+      - field: stage
+        value: Closed Lost
+    value_format_name: usd
+
+  - name: count_active_opportunities
+    field_type: measure
+    type: count
+    description: The number of open opportunities not yet closed (won or lost).
+    sql: ${opportunity}
+    filters:
+      - field: stage
+        value: -Closed Won,-Closed Lost
+    value_format_name: decimal_0
+
+  - name: total_pipeline_value
+    field_type: measure
+    type: sum
+    description: The total deal size for all open (active) opportunities not yet closed.
+    sql: ${deal_size}
+    filters:
+      - field: stage
+        value: -Closed Won,-Closed Lost
+    value_format_name: usd
