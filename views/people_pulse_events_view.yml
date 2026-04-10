@@ -93,3 +93,78 @@ fields:
     description: The count of unique customers associated with the events
     sql: ${customer_id}
     value_format_name: decimal_0
+
+  - name: unique_users
+    field_type: measure
+    type: count_distinct
+    description: The count of unique users (including anonymous) who triggered events
+    sql: ${user_id}
+    value_format_name: decimal_0
+
+  - name: events_per_customer
+    field_type: measure
+    type: number
+    description: Average number of events per customer (engagement intensity metric)
+    sql: ${total_events} / NULLIF(${unique_customers}, 0)
+    value_format_name: decimal_1
+
+  - name: events_per_user
+    field_type: measure
+    type: number
+    description: Average number of events per user (engagement intensity metric)
+    sql: ${total_events} / NULLIF(${unique_users}, 0)
+    value_format_name: decimal_1
+
+  - name: mobile_events
+    field_type: measure
+    type: count
+    description: Number of events from mobile devices
+    sql: ${event_id}
+    filters:
+      - field: device_type
+        value: Mobile
+    value_format_name: decimal_0
+
+  - name: desktop_events
+    field_type: measure
+    type: count
+    description: Number of events from desktop devices
+    sql: ${event_id}
+    filters:
+      - field: device_type
+        value: Desktop
+    value_format_name: decimal_0
+
+  - name: mobile_adoption_rate
+    field_type: measure
+    type: number
+    description: Percentage of events occurring on mobile devices
+    sql: ${mobile_events} / NULLIF(${total_events}, 0)
+    value_format_name: percent_1
+
+  - name: daily_active_users
+    field_type: measure
+    type: count_distinct
+    description: >-
+      Count of distinct users active on a given day. 
+      Use with event_time_date dimension for daily DAU tracking.
+    sql: ${user_id}
+    value_format_name: decimal_0
+
+  - name: daily_active_customers
+    field_type: measure
+    type: count_distinct
+    description: >-
+      Count of distinct customers active on a given day. 
+      Use with event_time_date dimension for daily active customer tracking.
+    sql: ${customer_id}
+    value_format_name: decimal_0
+
+  - name: power_users
+    field_type: measure
+    type: count_distinct
+    description: >-
+      Users with more than 50 events (power user threshold). 
+      Note: This is a simplified metric; for accurate power user analysis, use a window function.
+    sql: CASE WHEN COUNT(${event_id}) > 50 THEN ${user_id} END
+    value_format_name: decimal_0
