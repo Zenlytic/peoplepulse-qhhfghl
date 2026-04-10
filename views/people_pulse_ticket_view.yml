@@ -93,3 +93,20 @@ fields:
     type: average
     description: The average time it took to resolve a ticket in minutes
     sql: ${resolution_time}
+
+  - name: customer_health_score
+    field_type: measure
+    type: number
+    description: A composite 0–100 score blending customer satisfaction (70% weight) and resolution speed (30% weight). Higher is healthier. Satisfaction is normalized from a 1–5 scale; resolution time is inverted so faster resolutions score higher (capped at 480 minutes).
+    sql: |
+      ROUND(
+        (AVG(${customer_satisfaction_score}) / 5.0 * 70)
+        + (GREATEST(0, 1 - AVG(${resolution_time}) / 480.0) * 30),
+        1
+      )
+    value_format_name: decimal_1
+    synonyms:
+      - health score
+      - support health
+      - cs score
+      - customer score
