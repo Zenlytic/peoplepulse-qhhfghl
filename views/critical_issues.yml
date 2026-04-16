@@ -1,0 +1,28 @@
+type: view
+name: critical_issues
+model_name: zenlytic_managed
+sql_table_name: critical_issues
+fields:
+  - name: Reason
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."REASON"
+    searchable: true
+
+  - name: Source
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."SOURCE"
+    searchable: true
+
+  - name: Validation
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."VALIDATION"
+    searchable: true
+
+  - name: Pages
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."PAGES"
+    searchable: true
