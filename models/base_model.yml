@@ -8,4 +8,3 @@ access_grants:
     user_attribute: My Thing
     allowed_values:
       - Hey
-

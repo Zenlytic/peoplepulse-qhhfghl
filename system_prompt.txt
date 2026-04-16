@@ -1,1 +1,0 @@
-Always clarify with the user if they ask about sales.

@@ -1,0 +1,34 @@
+type: view
+name: processed_data
+model_name: zenlytic_managed
+sql_table_name: processed_data
+fields:
+  - name: timestamp
+    field_type: dimension
+    type: string
+    sql: ${TABLE}."TIMESTAMP"
+    searchable: true
+
+  - name: latency
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."LATENCY"
+    searchable: true
+
+  - name: inputTokens
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."INPUTTOKENS"
+    searchable: true
+
+  - name: outputTokens
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."OUTPUTTOKENS"
+    searchable: true
+
+  - name: totalTokens
+    field_type: dimension
+    type: number
+    sql: ${TABLE}."TOTALTOKENS"
+    searchable: true
