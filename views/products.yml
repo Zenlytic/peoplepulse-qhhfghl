@@ -1,0 +1,25 @@
+version: 1
+type: view
+name: products
+model_name: peoplepulse_model
+sql_table_name: DEMO."DEMO_PROD"."PRODUCTS"
+fields:
+- name: product_title
+  sql: ${TABLE}."PRODUCT_TITLE"
+  field_type: dimension
+  type: string
+  searchable: true
+- name: product_id
+  sql: ${TABLE}."PRODUCT_ID"
+  field_type: dimension
+  type: string
+  searchable: true
+- name: product_type
+  sql: ${TABLE}."PRODUCT_TYPE"
+  field_type: dimension
+  type: string
+  searchable: true
+- name: price
+  sql: ${TABLE}."PRICE"
+  field_type: dimension
+  type: number

@@ -1,0 +1,58 @@
+version: 1
+type: view
+name: marketing_spend
+model_name: peoplepulse_model
+sql_table_name: DEMO."DEMO_PROD"."MARKETING_SPEND"
+fields:
+- name: spend_id
+  sql: ${TABLE}."SPEND_ID"
+  field_type: dimension
+  type: string
+  searchable: false
+- name: channel
+  sql: ${TABLE}."CHANNEL"
+  field_type: dimension
+  type: string
+  searchable: true
+- name: campaign
+  sql: ${TABLE}."CAMPAIGN"
+  field_type: dimension
+  type: string
+  searchable: true
+- name: ad_spend
+  sql: ${TABLE}."AD_SPEND"
+  field_type: dimension
+  type: number
+- name: revenue_from_paid_marketing
+  sql: ${TABLE}."REVENUE_FROM_PAID_MARKETING"
+  field_type: dimension
+  type: number
+- name: spend_at
+  sql: ${TABLE}."SPEND_AT"
+  field_type: dimension_group
+  type: time
+  timeframes:
+  - raw
+  - date
+  - day_of_year
+  - week
+  - week_of_year
+  - month
+  - month_of_year
+  - quarter
+  - year
+  datatype: timestamp
+- name: gross_profit_from_paid_marketing
+  sql: ${TABLE}."GROSS_PROFIT_FROM_PAID_MARKETING"
+  field_type: dimension
+  type: number
+- name: source
+  sql: ${TABLE}."SOURCE"
+  field_type: dimension
+  type: string
+  searchable: true
+- name: customers_from_paid_marketing
+  sql: ${TABLE}."CUSTOMERS_FROM_PAID_MARKETING"
+  field_type: dimension
+  type: number
+default_date: spend_at
