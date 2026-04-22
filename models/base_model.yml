@@ -1,6 +1,6 @@
 name: peoplepulse_model
 connection: demo
-type: moddel
+type: model
 version: 1
 fiscal_month_offset: 1
 access_grants:
