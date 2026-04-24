@@ -3,6 +3,7 @@ type: view
 name: customers
 model_name: peoplepulse_model
 sql_table_name: DEMO."DEMO_PROD"."CUSTOMERS"
+
 fields:
 - name: zipcode
   sql: ${TABLE}."ZIPCODE"
