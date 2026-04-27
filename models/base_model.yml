@@ -11,5 +11,5 @@ access_grants:
   - name: soemthing_else
     user_attributes: My Thing2
     allowed_values:
-      - Somethingg
+      - Somethingge
 
