@@ -4,7 +4,8 @@ name: customers_orimi
 model_name: peoplepulse_model
 sql_table_name: DEMO."DEMO_PROD"."CUSTOMERS_ORIMI"
 fields:
-  - name: email2
+- name: email2
+  sql: ${TABLE}
 - name: email
   sql: ${TABLE}."EMAIL"
   field_type: dimension
