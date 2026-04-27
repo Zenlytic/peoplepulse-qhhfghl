@@ -11,7 +11,7 @@ fields:
   searchable: false
 - name: email3
   sql: ${TABLE}."EMAIL"
-  
+  field_type: dimension
 - name: email
   sql: ${TABLE}."EMAIL"
   field_type: dimension
