@@ -4,6 +4,7 @@ name: events
 model_name: peoplepulse_model
 sql_table_name: DEMO."DEMO_PROD"."EVENTS"
 fields:
+  
 - name: os_timezone
   sql: ${TABLE}."OS_TIMEZONE"
   field_type: dimension
