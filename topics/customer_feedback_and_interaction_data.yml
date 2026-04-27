@@ -24,7 +24,7 @@ hidden: false
 views:
   customer:
     join:
-      join_type: left_outer
+      join_type: full_outer
       relationship: many_to_one
       sql_on: ${nps_survey.customer_id}=${customer.customer_id}
   events:
