@@ -10,7 +10,8 @@ fields:
   type: string
   searchable: false
 - name: email3
-  sql: $Q{T}
+  sql: ${TABLE}."EMAIL"
+  
 - name: email
   sql: ${TABLE}."EMAIL"
   field_type: dimension
