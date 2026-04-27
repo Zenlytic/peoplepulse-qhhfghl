@@ -6,6 +6,7 @@ sql_table_name: DEMO."DEMO_PROD"."EVENTS"
 fields:
 - name: os_timezone2
   sql: ${TABLE}."OS_TIMEZONE"
+  type: string
 - name: os_timezone
   sql: ${TABLE}."OS_TIMEZONE"
   field_type: dimension
