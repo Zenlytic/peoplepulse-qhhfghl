@@ -8,6 +8,7 @@ fields:
   sql: ${TABLE}."OS_TIMEZONE"
   type: string
   searchable: true
+  
 - name: os_timezone
   sql: ${TABLE}."OS_TIMEZONE"
   field_type: dimension
