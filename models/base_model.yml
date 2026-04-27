@@ -9,5 +9,5 @@ access_grants:
     allowed_values:
       - Hey
   - name: soemthing_else
-    user_attributes: My
+    user_attributes: My Thing
 
