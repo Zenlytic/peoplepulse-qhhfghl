@@ -10,7 +10,8 @@ fields:
   searchable: true
   field_type: dimension
 - name: os_timezone3
-  sql: ${TABLE}.""
+  sql: ${TABLE}."SOMETHING_ELSE"
+  field
 - name: os_timezone
   sql: ${TABLE}."OS_TIMEZONE"
   field_type: dimension
