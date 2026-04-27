@@ -12,7 +12,8 @@ fields:
 - name: os_timezone3
   sql: ${TABLE}."SOMETHING_ELSE"
   field_type: dimension
-  sear
+  searchable: true
+  type: string
 - name: os_timezone
   sql: ${TABLE}."OS_TIMEZONE"
   field_type: dimension
