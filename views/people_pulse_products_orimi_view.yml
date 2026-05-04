@@ -51,9 +51,9 @@ fields:
     hidden: false
 
   - field_type: measure
-    type: average
+    type: number
     name: average_price
     label: Average Price
-    description: Average price across products.
-    sql: ${TABLE}."PRICE"
+    description: Weighted average price, where each product's price is weighted by the numeric value extracted from its PRODUCT_ID (e.g. 'P3' has weight 3).
+    sql: SUM(${TABLE}."PRICE" * TRY_TO_NUMBER(REGEXP_REPLACE(${TABLE}."PRODUCT_ID", '[^0-9]', ''))) / NULLIF(SUM(TRY_TO_NUMBER(REGEXP_REPLACE(${TABLE}."PRODUCT_ID", '[^0-9]', ''))), 0)
     hidden: false
