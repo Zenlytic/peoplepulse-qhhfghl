@@ -1,0 +1,59 @@
+version: 1
+type: view
+name: products_orimi
+model_name: peoplepulse_model
+label: Products Orimi
+description: Product catalog from the PRODUCTS_ORIMI warehouse table, containing product identifiers, types, titles, and pricing.
+sql_table_name: DEMO.DEMO_PROD.PRODUCTS_ORIMI
+fields:
+  - field_type: dimension
+    type: string
+    name: product_id
+    label: Product ID
+    description: Unique identifier for each product.
+    sql: ${TABLE}."PRODUCT_ID"
+    primary_key: true
+    searchable: true
+    hidden: false
+
+  - field_type: dimension
+    type: string
+    name: product_type
+    label: Product Type
+    description: The category or type of the product.
+    sql: ${TABLE}."PRODUCT_TYPE"
+    searchable: true
+    hidden: false
+
+  - field_type: dimension
+    type: string
+    name: product_title
+    label: Product Title
+    description: The display name or title of the product.
+    sql: ${TABLE}."PRODUCT_TITLE"
+    searchable: true
+    hidden: false
+
+  - field_type: dimension
+    type: number
+    name: price
+    label: Price
+    description: The price of the product.
+    sql: ${TABLE}."PRICE"
+    hidden: false
+
+  - field_type: measure
+    type: count
+    name: count_products
+    label: Count of Products
+    description: Total number of products.
+    sql: ${TABLE}."PRODUCT_ID"
+    hidden: false
+
+  - field_type: measure
+    type: average
+    name: average_price
+    label: Average Price
+    description: Average price across products.
+    sql: ${TABLE}."PRICE"
+    hidden: false
