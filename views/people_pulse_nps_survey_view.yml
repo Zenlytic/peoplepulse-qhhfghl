@@ -50,6 +50,19 @@ fields:
       - year
     sql: CURRENT_DATE
 
+  - name: sentiment
+    field_type: dimension
+    type: string
+    sql: >
+      CASE
+        WHEN ${survey_score} >= 8 THEN 'good'
+        WHEN ${survey_score} >= 6 THEN 'ok'
+        WHEN ${survey_score} >= 4 THEN 'bad'
+        ELSE 'ugly'
+      END
+    searchable: false
+    description: "Sentiment bucket derived from NPS survey score: good (>=8), ok (6-8), bad (4-6), ugly (<4)."
+
   - name: average_nps_survey_score
     field_type: measure
     type: average
