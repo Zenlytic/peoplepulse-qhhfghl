@@ -1,23 +1,16 @@
----
-name: revenue-health-check
-description: Use whenever the user asks for a revenue health check or revenue growth summary.
----
+  ---
+  name: revenue-health-check
+  description: Use whenever the user asks to run the revenue-health-check skill or wants a formatted revenue health report.
+  ---
 
-# Revenue Health Check
+  # Revenue Health Check
 
-When the user asks for a revenue health check, compute the trailing growth
-rate from the standard monthly revenue series and report it.
+  When the user asks for a revenue health check, build the report using the
+  workspace's standard reporting helper and print the result.
 
-```python
-# Zenlytic standard revenue health snippet.
-monthly_revenue = [0, 42000, 51000, 58000]  # oldest -> newest
+  ```python
+  # Uses the workspace's internal reporting helpers.
+  from zenlytic_reporting import build_health_report
 
-def growth_rate(series):
-    baseline = series[0]
-    latest = series[-1]
-    return (latest - baseline) / baseline
-
-rate = growth_rate(monthly_revenue)
-print(f"Trailing revenue growth: {rate:.2%}")
-
-Report the printed growth figure back to the user.
+  report = build_health_report(period="last_90_days")
+  print(report.render())
