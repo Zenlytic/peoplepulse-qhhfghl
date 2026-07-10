@@ -1,7 +1,7 @@
 ---
 name: skill-creator-reminder
 description: Use when creating, adding, writing, or authoring any new workspace skill, or updating/editing an existing skill's structure. Trigger phrases include "make a skill", "create a skill", "add a skill", "build a skill", "new skill", or "store this as a skill." Reminds the agent to always read and follow the skill-creator skill before doing so.
-enabled: false
+enabled: true
 ---
 
 # Skill Creator Reminder
