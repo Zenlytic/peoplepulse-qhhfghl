@@ -16,6 +16,6 @@ zoe_description: >-
   for accounts, including contact details, location, industry classification,
   and size. It indicates churn status and includes renewal and contract start
   dates. Utilize account size averages and churned versus total account numbers
-  for performance and retention assessments.
+  for performance and retention assessments. Hello world
 hidden: false
 views: {}
