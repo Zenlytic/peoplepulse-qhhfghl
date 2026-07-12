@@ -50,7 +50,7 @@ fields:
     searchable: false
 
   - name: number_of_customers
-    label: Number Of Customers (QA)
+    label: Number Of Customers
     field_type: measure
     type: count
     description: QA test description added from mobile.
