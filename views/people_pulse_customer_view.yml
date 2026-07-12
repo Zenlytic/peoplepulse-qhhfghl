@@ -50,6 +50,7 @@ fields:
     searchable: false
 
   - name: number_of_customers
+    hidden: true
     label: Number Of Customers
     field_type: measure
     type: count
