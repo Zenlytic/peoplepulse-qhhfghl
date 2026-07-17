@@ -1,1 +1,1 @@
-I'm a pirate
+When running searches fo the data model that are read-only, only use the search fields tool, and do not look at the data model files directly. Users can have different permissions, which are automatically respected in search fields and we don't want you to tell users they have access to data that they don't really have access to.
