@@ -8,4 +8,81 @@ access_grants:
     user_attribute: My Thing
     allowed_values:
       - Hey
+relationships:
+  # --- Account joins (accounts are the paying companies in Salesforce) ---
+  - from_table: customer
+    join_table: account
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${customer.account_id} = ${account.account_id}
+
+  - from_table: invoice
+    join_table: account
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${invoice.account_id} = ${account.account_id}
+
+  - from_table: people_pulse_mrr
+    join_table: account
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${people_pulse_mrr.account_id} = ${account.account_id}
+
+  # --- Customer (product user) joins ---
+  - from_table: events
+    join_table: customer
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${events.customer_id} = ${customer.customer_id}
+
+  - from_table: nps_survey
+    join_table: customer
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${nps_survey.customer_id} = ${customer.customer_id}
+
+  - from_table: ticket
+    join_table: customer
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${ticket.customer_id} = ${customer.customer_id}
+
+  # --- Ticket to employee: ticket has both a creator and an assignee, both are employees ---
+  - from_table: ticket
+    join_table: employee
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${ticket.assignee_id} = ${employee.employee_id}
+
+  # --- Invoicing joins ---
+  - from_table: invoice_item
+    join_table: invoice
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${invoice_item.invoice_id} = ${invoice.invoice_id}
+
+  - from_table: invoice_item
+    join_table: product
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${invoice_item.product_id} = ${product.product_id}
+
+  # --- Sales pipeline / rep joins ---
+  - from_table: sales_pipeline
+    join_table: product
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${sales_pipeline.product_id} = ${product.product_id}
+
+  - from_table: sales_pipeline
+    join_table: sales_rep
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${sales_pipeline.sales_rep_id} = ${sales_rep.sales_rep_id}
+
+  - from_table: people_pulse_plan
+    join_table: sales_rep
+    relationship: many_to_one
+    join_type: left_outer
+    sql_on: ${people_pulse_plan.sales_rep_id} = ${sales_rep.sales_rep_id}
 
