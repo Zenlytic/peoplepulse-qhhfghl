@@ -15,6 +15,7 @@ fields:
     type: number
     hidden: true
     primary_key: true
+    description: Unique identifier for each customer account.
     sql: ${TABLE}."ACCOUNT_ID"
 
   - name: annual_revenue
