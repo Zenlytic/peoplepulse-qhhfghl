@@ -15,7 +15,7 @@ fields:
     type: number
     hidden: true
     primary_key: true
-    description: Unique identifier for the account.
+    description: Unique identifier for the company (account) that holds a contract for the product.
     sql: ${TABLE}."ACCOUNT_ID"
 
   - name: annual_revenue
