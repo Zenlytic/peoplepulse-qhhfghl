@@ -79,3 +79,14 @@ fields:
     non_additive_dimension:
       name: date_raw
       window_choice: max
+
+  - name: joes_metrics
+    field_type: measure
+    type: average
+    label: Joe's Metrics
+    description: Average monthly recurring revenue per account (ARPA) — Joe's favorite way to gauge how much each account is worth on average.
+    sql: ${mrr}
+    value_format_name: usd
+    non_additive_dimension:
+      name: date_raw
+      window_choice: max
