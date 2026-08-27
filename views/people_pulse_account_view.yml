@@ -117,5 +117,12 @@ fields:
   - name: number_of_active_accounts
     field_type: measure
     type: count_distinct
-    description: The number of accounts that have at least one product event recorded by an associated customer.
-    sql: CASE WHEN EXISTS (SELECT 1 FROM DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER c JOIN DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EVENTS e ON c."CUSTOMER_ID" = e."CUSTOMER_ID" WHERE c."ACCOUNT_ID" = ${TABLE}."ACCOUNT_ID") THEN ${TABLE}."ACCOUNT_ID" ELSE NULL END
+    description: >-
+      The number of accounts that have at least one product event recorded by an
+      associated customer.
+    sql: >-
+      CASE WHEN EXISTS (SELECT 1 FROM
+      DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER c JOIN
+      DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EVENTS e ON c."CUSTOMER_ID" =
+      e."CUSTOMER_ID" WHERE c."ACCOUNT_ID" = ${TABLE}."ACCOUNT_ID") THEN
+      ${TABLE}."ACCOUNT_ID" ELSE NULL END
