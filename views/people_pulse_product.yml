@@ -4,18 +4,20 @@ name: people_pulse_product
 model_name: peoplepulse_model
 sql_table_name: DEMO."DEMO_PROD_PEOPLE_PULSE"."PEOPLE_PULSE_PRODUCT"
 fields:
-- name: product_name
-  sql: ${TABLE}."PRODUCT_NAME"
-  field_type: dimension
-  type: string
-  searchable: true
-- name: product_type
-  sql: ${TABLE}."PRODUCT_TYPE"
-  field_type: dimension
-  type: string
-  searchable: true
-- name: product_id
-  sql: ${TABLE}."PRODUCT_ID"
-  field_type: dimension
-  type: string
-  searchable: true
+  - name: product_name
+    sql: ${TABLE}."PRODUCT_NAME"
+    field_type: dimension
+    type: string
+    searchable: true
+
+  - name: product_type
+    sql: ${TABLE}."PRODUCT_TYPE"
+    field_type: dimension
+    type: string
+    searchable: true
+
+  - name: product_id
+    sql: ${TABLE}."PRODUCT_ID"
+    field_type: dimension
+    type: string
+    searchable: true
