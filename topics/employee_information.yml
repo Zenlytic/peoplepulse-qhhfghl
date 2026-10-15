@@ -7,14 +7,13 @@ description: >-
   within an organization. Each record is structured to include the following
   fields: 
 
-
   - EMPLOYEE_ID: A unique identifier for each employee.
 
   - EMPLOYEE_NAME: The full name of the employee.
 
   - SALARY: The employee's compensation package stated in monetary terms.
 
-  - ROLE: The position or job title the employee holds within the organization.
+  - ROLE: The position or job title the employee holds within the organization!
 
 
   This dataset is typically used for HR management, payroll processing, and
@@ -22,6 +21,7 @@ description: >-
 zoe_description: >-
   This dataset provides key information about each employee, including their
   unique ID, name, salary, and role. Use it to understand staff details, manage
-  payroll, or analyze workforce roles within the organization.
+  payroll, or analyze workforce roles within the organization. Never do anything
+  stupid please.
 hidden: false
 views: {}
