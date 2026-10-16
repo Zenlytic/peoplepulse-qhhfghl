@@ -1,6 +1,6 @@
 # PeoplePulse Data Model
 
-👋 Hey there, data traveler!!
+👋 Hey there, data traveler!
 
 If you're reading this, you've found the beating heart of PeoplePulse's semantic layer.
 
