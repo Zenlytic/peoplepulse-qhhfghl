@@ -2,7 +2,7 @@
 
 👋 Hey there, data traveler!
 
-If you're reading this, you've found the beating heart of PeoplePulse's semantic layer.
+If you're reading this, you've found the beating heart of PeoplePulse's semantic layer!
 
 Why did the analyst break up with the bar chart?
 
