@@ -120,5 +120,5 @@ fields:
   - name: average_page_views_per_session
     field_type: measure
     type: average
-    description: The average number of page views per session
+    description: The average number of page views per session.
     sql: ${page_views}
