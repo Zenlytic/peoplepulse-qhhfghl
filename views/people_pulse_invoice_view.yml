@@ -48,12 +48,22 @@ fields:
       - year
     sql: ${TABLE}."INVOICE_DATE"
 
+  - name: branch_test_invoice_count
+    field_type: measure
+    type: count
+    description: Count of all invoices.
+    value_format_name: decimal_0
+    sql: ${invoice_id}
+
   - name: total_invoices
     field_type: measure
     type: count
-    description: The total number of invoices.
+    description: The total number of invoices dated in 2025.
     value_format_name: decimal_0
     sql: ${invoice_id}
+    filters:
+      - field: invoice_date
+        value: 2025
 
   - name: total_accounts
     field_type: measure
