@@ -62,8 +62,8 @@ fields:
     value_format_name: decimal_0
     sql: ${invoice_id}
     filters:
-      - field: invoice_date
-        value: 2025
+      - field: invoice_date_year
+        value: '2025'
 
   - name: total_accounts
     field_type: measure
