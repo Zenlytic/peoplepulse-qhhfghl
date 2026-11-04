@@ -163,6 +163,19 @@ fields:
         value: Closed Lost
     value_format_name: decimal_0
 
+  - name: win_rate_pct
+    field_type: measure
+    type: number
+    description: >-
+      The percentage of closed deals that were won. Calculated as won
+      opportunities divided by all closed (won + lost) opportunities.
+    sql: >-
+      ROUND(
+        100.0 * COUNT(CASE WHEN ${stage} = 'Closed Won' THEN ${opportunity} END)
+        / NULLIF(COUNT(CASE WHEN ${stage} IN ('Closed Won', 'Closed Lost') THEN ${opportunity} END), 0)
+      , 1)
+    value_format_name: percent_0
+
   - name: average_probability_to_close
     field_type: measure
     type: average
