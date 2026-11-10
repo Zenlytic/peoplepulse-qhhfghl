@@ -168,3 +168,9 @@ fields:
     type: average
     description: The average probability to close across all opportunities.
     sql: ${probability_to_close}
+  - name: average_won_deal_size
+    field_type: measure
+    type: average
+    label: Average Won Deal Size
+    description: The average deal size (after the 0.15 factor) for opportunities that have been won (Closed Won stage). Complements closed_won_usd (total) and average_deal_size (all stages).
+    sql: CASE WHEN CASE WHEN SALES_PIPELINE."STAGE" IN ('Proposal', 'Lead Generation') THEN 'MQL' WHEN SALES_PIPELINE."STAGE" = 'Qualification' THEN 'Demo' WHEN SALES_PIPELINE."STAGE" = 'Initial Contact' THEN 'Qualified Opportunity' WHEN SALES_PIPELINE."STAGE" = 'Negotiation' THEN 'Pilot' WHEN SALES_PIPELINE."STAGE" = 'Meeting' THEN 'Decision & Compliance' ELSE SALES_PIPELINE."STAGE" END = 'Closed Won' THEN SALES_PIPELINE."DEAL_SIZE" * 0.15 END
