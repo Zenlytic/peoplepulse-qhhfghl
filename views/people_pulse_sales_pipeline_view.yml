@@ -168,3 +168,9 @@ fields:
     type: average
     description: The average probability to close across all opportunities.
     sql: ${probability_to_close}
+  - name: win_rate_pct
+    field_type: measure
+    type: number
+    label: Win Rate Pct
+    description: The percentage of closed opportunities that were won, calculated as Closed Won divided by (Closed Won + Closed Lost), rounded to one decimal place.
+    sql: ROUND(COUNT(CASE WHEN SALES_PIPELINE.STAGE = 'Closed Won' THEN SALES_PIPELINE.OPPORTUNITY END) * 100.0 / NULLIF(COUNT(CASE WHEN SALES_PIPELINE.STAGE IN ('Closed Won', 'Closed Lost') THEN SALES_PIPELINE.OPPORTUNITY END), 0), 1)
