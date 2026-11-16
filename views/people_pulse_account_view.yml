@@ -23,6 +23,19 @@ fields:
     hidden: true
     sql: ${TABLE}."ANNUAL_REVENUE"
 
+  - name: revenue_tier
+    field_type: dimension
+    type: string
+    description: Account revenue tier based on annual revenue (Enterprise, Mid-Market, SMB)
+    searchable: true
+    sql: |
+      CASE 
+        WHEN ${TABLE}."ANNUAL_REVENUE" >= 1000000 THEN 'Enterprise'
+        WHEN ${TABLE}."ANNUAL_REVENUE" >= 100000 THEN 'Mid-Market'
+        WHEN ${TABLE}."ANNUAL_REVENUE" > 0 THEN 'SMB'
+        ELSE 'Unknown'
+      END
+
   - name: contact_email
     field_type: dimension
     type: string
@@ -57,6 +70,12 @@ fields:
     type: string
     sql: ${TABLE}."CHURNED"
     searchable: true
+
+  - name: is_churned
+    field_type: dimension
+    type: yesno
+    description: Whether the account has churned (yes/no for easy filtering)
+    sql: ${TABLE}."CHURNED" = 'Yes'
 
   - name: industry
     field_type: dimension
@@ -119,6 +138,23 @@ fields:
     type: count_distinct
     description: The number of accounts that have at least one product event recorded by an associated customer.
     sql: CASE WHEN EXISTS (SELECT 1 FROM DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_CUSTOMER c JOIN DEMO.DEMO_PROD_PEOPLE_PULSE.PEOPLE_PULSE_EVENTS e ON c."CUSTOMER_ID" = e."CUSTOMER_ID" WHERE c."ACCOUNT_ID" = ${TABLE}."ACCOUNT_ID") THEN ${TABLE}."ACCOUNT_ID" ELSE NULL END
+
+  - name: average_contract_length_days
+    field_type: measure
+    type: average
+    description: Average contract length in days (from contract start to renewal date)
+    sql: DATEDIFF(day, ${TABLE}."CONTRACT_START_DATE", ${TABLE}."CONTRACT_END_DATE")
+
+  - name: churn_rate
+    field_type: measure
+    type: number
+    description: Percentage of accounts that have churned
+    sql: |
+      CASE 
+        WHEN COUNT(DISTINCT ${account_id}) > 0 
+        THEN (COUNT(DISTINCT CASE WHEN ${churned} = 'Yes' THEN ${account_id} END) * 100.0) / COUNT(DISTINCT ${account_id})
+        ELSE 0 
+      END
 
 
 
